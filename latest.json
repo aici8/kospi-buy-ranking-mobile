@@ -1,0 +1,712 @@
+{
+  "schema_version": "static-dashboard-v1",
+  "generated_at": "2026-06-28T03:16:33.147728+09:00",
+  "generated_at_kst": "2026-06-28 03:16 KST",
+  "ranking_generated_at": "2026-06-28T03:16:33.147728+09:00",
+  "ranking_generated_at_kst": "2026-06-28 03:16 KST",
+  "page_checked_at": "2026-06-28T03:16:33.147728+09:00",
+  "page_checked_at_kst": "2026-06-28 03:16 KST",
+  "market_session": "weekend",
+  "market_session_label": "주말/휴장",
+  "heartbeat_mode": false,
+  "collection_status": "success",
+  "failure_message": "",
+  "realtime": {
+    "provider": "disabled",
+    "requested": false,
+    "configured": false,
+    "attempted": false,
+    "enabled": false,
+    "auth_success": false,
+    "quote_success_count": 0,
+    "quote_fail_count": 0,
+    "success_count": 0,
+    "fail_count": 0,
+    "skipped_reason": "kis_disabled",
+    "last_success_at_kst": "",
+    "error": "",
+    "diagnostic_hint": ""
+  },
+  "internet_quote": {
+    "enabled": true,
+    "provider": "naver_finance",
+    "attempted": true,
+    "success_count": 112,
+    "fail_count": 0,
+    "last_success_at_kst": "2026-06-28 03:16 KST",
+    "freshness_label": "인터넷 공개 현재가/일봉 기준",
+    "error": ""
+  },
+  "previous_result_used": false,
+  "market": "KOSPI",
+  "settings": {
+    "pages": 3,
+    "strictness": "보수적",
+    "count": 360,
+    "min_score": 70,
+    "include_watch": false,
+    "exclude_non_common": true,
+    "fill_observation_top10": true
+  },
+  "data_basis": {
+    "ranking_data": "인터넷 공개 현재가/일봉 데이터 기준",
+    "data_basis_date": "2026-06-26",
+    "last_collected_at": "2026-06-28 03:16 KST",
+    "realtime": "OFF",
+    "collection_method": "GitHub Actions 자동 수집",
+    "scanned_count": 112,
+    "result_count": 112,
+    "filtered_count": 2,
+    "display_count": 2
+  },
+  "freshness": {
+    "generated_at": "2026-06-28T03:16:33.147728+09:00",
+    "generated_at_kst": "2026-06-28 03:16 KST",
+    "refresh_interval_minutes": 10,
+    "stale_after_minutes": 15,
+    "very_stale_after_minutes": 30,
+    "stopped_after_minutes": 60,
+    "heartbeat_interval_minutes": 60,
+    "heartbeat_stale_after_minutes": 120,
+    "off_hours_stale_after_minutes": 90,
+    "off_hours_stopped_after_minutes": 180,
+    "off_hours_critical_after_minutes": 360
+  },
+  "market_state": {
+    "ok": true,
+    "score": 20,
+    "label": "시장 상승",
+    "reason": "지수 EMA50 위"
+  },
+  "macro_brief": {
+    "updated_at": "2026-06-28T03:15+09:00",
+    "mode": "close",
+    "indexes": {
+      "nasdaq": {
+        "label": "NASDAQ",
+        "value": "25,297.62",
+        "change": "-4.60%",
+        "change_number": -4.6018,
+        "status": "available",
+        "market_time": 1782508559
+      },
+      "sp500": {
+        "label": "S&P500",
+        "value": "7,354.02",
+        "change": "-1.95%",
+        "change_number": -1.954,
+        "status": "available",
+        "market_time": 1782508020
+      },
+      "sox": {
+        "label": "SOX",
+        "value": "13,203.57",
+        "change": "-7.94%",
+        "change_number": -7.9363,
+        "status": "available",
+        "market_time": 1782508559
+      },
+      "vix": {
+        "label": "VIX",
+        "value": "18.41",
+        "change": "+6.54%",
+        "change_number": 6.5394,
+        "status": "available",
+        "market_time": 1782504901
+      },
+      "usdkrw": {
+        "label": "USD/KRW",
+        "value": "1,535.00",
+        "change": "+0.24%",
+        "change_number": 0.2397,
+        "status": "available",
+        "market_time": 1782507962
+      },
+      "us10y": {
+        "label": "미국 10년물",
+        "value": "4.37%",
+        "change": "-0.02%p",
+        "change_number": -0.02,
+        "status": "available",
+        "market_time": 1782500395
+      },
+      "us2y": {
+        "label": "미국 2년물",
+        "value": null,
+        "change": null,
+        "status": "missing",
+        "error": "404 Client Error: Not Found for url: https://query1.finance.yahoo.com/v8/finance/chart/%5EUST2Y?interval=5m&range=5d&includePrePost=true"
+      },
+      "wti": {
+        "label": "WTI",
+        "value": "69.23",
+        "change": "-7.47%",
+        "change_number": -7.4713,
+        "status": "available",
+        "market_time": 1782507598
+      },
+      "dxy": {
+        "label": "DXY",
+        "value": "101.37",
+        "change": "+0.34%",
+        "change_number": 0.3425,
+        "status": "available",
+        "market_time": 1782507599
+      }
+    },
+    "macro_judgment": "위험회피",
+    "market_judgment": "위험회피",
+    "market_summary": "금리·환율·VIX·유가 또는 지수 약세 신호가 겹쳐 변동성 관리가 우선입니다.",
+    "korea_takeaway": "방어주 상대강도 가능성, 성장주와 급등 종목 추격 주의",
+    "issues": [
+      {
+        "category": "rates_fx",
+        "title": "국채금리/달러/환율",
+        "summary": "미국 금리와 달러 흐름은 한국 성장주와 외국인 수급 부담에 직접 연결됩니다.",
+        "evidence_title": "Treasury yields dollar exchange rate",
+        "impact": "risk_mixed",
+        "importance": 88,
+        "affected_assets": [
+          "DXY",
+          "USD/KRW",
+          "US yields"
+        ],
+        "affected_korea_sectors": [
+          "반도체",
+          "자동차",
+          "외국인 수급"
+        ],
+        "source_count": 1,
+        "freshness": "latest",
+        "korea_impact": "환율 부담 시 외국인 수급과 고밸류 성장주 주의"
+      },
+      {
+        "category": "indexes_volatility",
+        "title": "미국 지수/VIX",
+        "summary": "미국 지수와 VIX 흐름은 당일 위험선호·위험회피 판단의 기준입니다.",
+        "evidence_title": "Nasdaq S&P500 VIX stock market",
+        "impact": "risk_mixed",
+        "importance": 86,
+        "affected_assets": [
+          "NASDAQ",
+          "S&P500",
+          "VIX"
+        ],
+        "affected_korea_sectors": [
+          "성장주",
+          "방어주"
+        ],
+        "source_count": 1,
+        "freshness": "latest",
+        "korea_impact": "지수 방향보다 개별 종목 가격 위치와 손익비를 별도 확인"
+      },
+      {
+        "category": "oil_commodities",
+        "title": "유가/원자재",
+        "summary": "유가와 원자재 변동은 물가 기대와 운송·화학·에너지 업종에 영향을 줍니다.",
+        "evidence_title": "oil prices commodity inflation",
+        "impact": "risk_mixed",
+        "importance": 78,
+        "affected_assets": [
+          "WTI",
+          "inflation",
+          "energy"
+        ],
+        "affected_korea_sectors": [
+          "에너지",
+          "화학",
+          "운송"
+        ],
+        "source_count": 1,
+        "freshness": "latest",
+        "korea_impact": "에너지·방산·운송·화학 업종 차별화 가능"
+      },
+      {
+        "category": "recession_pmi",
+        "title": "경기/PMI/소비",
+        "summary": "PMI와 소비 지표는 경기민감주와 위험자산 선호를 가늠하는 보조 신호입니다.",
+        "evidence_title": "American Disabilities Testing Association Expands LSAT Accommodations Services for Candidates with Anxiety-Related Conditions with the Launch of LSATaccommodations.com",
+        "impact": "risk_mixed",
+        "importance": 70,
+        "affected_assets": [
+          "cyclicals",
+          "S&P500"
+        ],
+        "affected_korea_sectors": [
+          "자동차",
+          "조선",
+          "경기민감"
+        ],
+        "source_count": 13,
+        "freshness": "latest",
+        "korea_impact": "자동차·조선·소비·경기민감 업종 차별화 가능"
+      },
+      {
+        "title": "연준/FOMC",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "금리 경로 확인 전까지 성장주와 고밸류 업종 추격은 분리 대응이 필요합니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "물가/CPI/PCE",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "물가 지표는 금리 기대와 성장주 밸류 부담을 흔들 수 있습니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "고용/임금",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "고용 둔화와 임금 흐름은 경기민감주와 위험자산 선호에 영향을 줄 수 있습니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "반도체/AI/빅테크",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "SOX와 AI 대형주 흐름은 국내 반도체·인터넷·성장주 심리에 영향을 줄 수 있습니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      }
+    ],
+    "expanded_issues": [
+      {
+        "category": "rates_fx",
+        "title": "국채금리/달러/환율",
+        "summary": "미국 금리와 달러 흐름은 한국 성장주와 외국인 수급 부담에 직접 연결됩니다.",
+        "evidence_title": "Treasury yields dollar exchange rate",
+        "impact": "risk_mixed",
+        "importance": 88,
+        "affected_assets": [
+          "DXY",
+          "USD/KRW",
+          "US yields"
+        ],
+        "affected_korea_sectors": [
+          "반도체",
+          "자동차",
+          "외국인 수급"
+        ],
+        "source_count": 1,
+        "freshness": "latest",
+        "korea_impact": "환율 부담 시 외국인 수급과 고밸류 성장주 주의"
+      },
+      {
+        "category": "indexes_volatility",
+        "title": "미국 지수/VIX",
+        "summary": "미국 지수와 VIX 흐름은 당일 위험선호·위험회피 판단의 기준입니다.",
+        "evidence_title": "Nasdaq S&P500 VIX stock market",
+        "impact": "risk_mixed",
+        "importance": 86,
+        "affected_assets": [
+          "NASDAQ",
+          "S&P500",
+          "VIX"
+        ],
+        "affected_korea_sectors": [
+          "성장주",
+          "방어주"
+        ],
+        "source_count": 1,
+        "freshness": "latest",
+        "korea_impact": "지수 방향보다 개별 종목 가격 위치와 손익비를 별도 확인"
+      },
+      {
+        "category": "oil_commodities",
+        "title": "유가/원자재",
+        "summary": "유가와 원자재 변동은 물가 기대와 운송·화학·에너지 업종에 영향을 줍니다.",
+        "evidence_title": "oil prices commodity inflation",
+        "impact": "risk_mixed",
+        "importance": 78,
+        "affected_assets": [
+          "WTI",
+          "inflation",
+          "energy"
+        ],
+        "affected_korea_sectors": [
+          "에너지",
+          "화학",
+          "운송"
+        ],
+        "source_count": 1,
+        "freshness": "latest",
+        "korea_impact": "에너지·방산·운송·화학 업종 차별화 가능"
+      },
+      {
+        "category": "recession_pmi",
+        "title": "경기/PMI/소비",
+        "summary": "PMI와 소비 지표는 경기민감주와 위험자산 선호를 가늠하는 보조 신호입니다.",
+        "evidence_title": "American Disabilities Testing Association Expands LSAT Accommodations Services for Candidates with Anxiety-Related Conditions with the Launch of LSATaccommodations.com",
+        "impact": "risk_mixed",
+        "importance": 70,
+        "affected_assets": [
+          "cyclicals",
+          "S&P500"
+        ],
+        "affected_korea_sectors": [
+          "자동차",
+          "조선",
+          "경기민감"
+        ],
+        "source_count": 13,
+        "freshness": "latest",
+        "korea_impact": "자동차·조선·소비·경기민감 업종 차별화 가능"
+      },
+      {
+        "title": "연준/FOMC",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "금리 경로 확인 전까지 성장주와 고밸류 업종 추격은 분리 대응이 필요합니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "물가/CPI/PCE",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "물가 지표는 금리 기대와 성장주 밸류 부담을 흔들 수 있습니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "고용/임금",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "고용 둔화와 임금 흐름은 경기민감주와 위험자산 선호에 영향을 줄 수 있습니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "반도체/AI/빅테크",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "SOX와 AI 대형주 흐름은 국내 반도체·인터넷·성장주 심리에 영향을 줄 수 있습니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "유가/지정학",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "유가와 지정학 리스크는 물가 부담과 위험회피 심리를 키울 수 있습니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "버핏/기관 수급",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "대형 기관과 장기투자자 흐름은 글로벌 위험 선호를 해석하는 참고값입니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      }
+    ],
+    "news_items": [
+      "미국 금리와 달러 흐름은 한국 성장주와 외국인 수급 부담에 직접 연결됩니다.",
+      "미국 지수와 VIX 흐름은 당일 위험선호·위험회피 판단의 기준입니다.",
+      "유가와 원자재 변동은 물가 기대와 운송·화학·에너지 업종에 영향을 줍니다.",
+      "PMI와 소비 지표는 경기민감주와 위험자산 선호를 가늠하는 보조 신호입니다."
+    ],
+    "data_status": "available"
+  },
+  "rankings": {
+    "qualified": [
+      {
+        "code": "003490",
+        "name": "대한항공",
+        "market": "KOSPI",
+        "status": "눌림 대기",
+        "final_action": "눌림 확인",
+        "signal_type": "대기",
+        "direction_score": 70,
+        "entry_score": 76,
+        "rr_ratio": 2.0,
+        "entry_range": "27,200 ~ 27,850",
+        "stop_loss": "25,750",
+        "target_1": "31,550",
+        "current_price": "28,050",
+        "data_basis_date": "2026-06-26",
+        "detail_path": "details/003490.html",
+        "badges": [
+          "외국인 +",
+          "기관 +"
+        ],
+        "reasons": [
+          "ADX 22, +DI 우위",
+          "외국인 5일 순매수",
+          "기관 5일 순매수"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 1.1% 높아 강한 매수로 표시하지 않습니다."
+        ],
+        "observation": false
+      },
+      {
+        "code": "000500",
+        "name": "가온전선",
+        "market": "KOSPI",
+        "status": "관심",
+        "final_action": "관심",
+        "signal_type": "상승추세 눌림목",
+        "direction_score": 84,
+        "entry_score": 73,
+        "rr_ratio": 3.55,
+        "entry_range": "310,400 ~ 338,400",
+        "stop_loss": "242,800",
+        "target_1": "458,300",
+        "current_price": "329,000",
+        "data_basis_date": "2026-06-26",
+        "detail_path": "details/000500.html",
+        "badges": [
+          "관심"
+        ],
+        "reasons": [
+          "상승추세 안에서 EMA/VWAP 눌림 후 재상승",
+          "MACD 히스토그램 개선",
+          "거래량 17% 증가"
+        ],
+        "cautions": [
+          "손절폭이 너무 좁거나 넓음"
+        ],
+        "observation": false
+      }
+    ],
+    "supplemental": [
+      {
+        "code": "004170",
+        "name": "신세계",
+        "market": "KOSPI",
+        "status": "진입 보류",
+        "final_action": "진입 보류",
+        "signal_type": "대기",
+        "direction_score": 62,
+        "entry_score": 40,
+        "rr_ratio": 2.0,
+        "entry_range": "700,600 ~ 722,600",
+        "stop_loss": "648,000",
+        "target_1": "878,000",
+        "current_price": "740,000",
+        "data_basis_date": "2026-06-26",
+        "detail_path": "details/004170.html",
+        "badges": [
+          "외국인 +"
+        ],
+        "reasons": [
+          "MACD 히스토그램 개선",
+          "ADX 48, +DI 우위",
+          "외국인 5일 순매수"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 2.7% 높아 강한 매수로 표시하지 않습니다.",
+          "현재가가 EMA20보다 10.6% 높아 눌림목 진입으로 보기 어렵습니다."
+        ],
+        "observation": true
+      },
+      {
+        "code": "000660",
+        "name": "SK하이닉스",
+        "market": "KOSPI",
+        "status": "진입 보류",
+        "final_action": "진입 보류",
+        "signal_type": "대기",
+        "direction_score": 58,
+        "entry_score": 48,
+        "rr_ratio": 2.0,
+        "entry_range": "2,689,900 ~ 2,767,700",
+        "stop_loss": "2,349,100",
+        "target_1": "3,158,900",
+        "current_price": "2,673,000",
+        "data_basis_date": "2026-06-26",
+        "detail_path": "details/000660.html",
+        "badges": [],
+        "reasons": [
+          "ADX 36, +DI 우위",
+          "거래량 21% 증가"
+        ],
+        "cautions": [
+          "현재가가 EMA20보다 10.1% 높아 눌림목 진입으로 보기 어렵습니다."
+        ],
+        "observation": true
+      },
+      {
+        "code": "402340",
+        "name": "SK스퀘어",
+        "market": "KOSPI",
+        "status": "진입 보류",
+        "final_action": "진입 보류",
+        "signal_type": "대기",
+        "direction_score": 58,
+        "entry_score": 12,
+        "rr_ratio": 2.0,
+        "entry_range": "1,511,700 ~ 1,584,700",
+        "stop_loss": "1,471,200",
+        "target_1": "2,093,200",
+        "current_price": "1,720,000",
+        "data_basis_date": "2026-06-26",
+        "detail_path": "details/402340.html",
+        "badges": [
+          "기관 +"
+        ],
+        "reasons": [
+          "ADX 38, +DI 우위",
+          "기관 5일 순매수"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 9.3% 높아 강한 매수로 표시하지 않습니다.",
+          "현재가가 EMA20보다 11.2% 높아 눌림목 진입으로 보기 어렵습니다."
+        ],
+        "observation": true
+      },
+      {
+        "code": "034730",
+        "name": "SK",
+        "market": "KOSPI",
+        "status": "진입 보류",
+        "final_action": "진입 보류",
+        "signal_type": "대기",
+        "direction_score": 56,
+        "entry_score": 25,
+        "rr_ratio": 2.0,
+        "entry_range": "752,600 ~ 775,400",
+        "stop_loss": "719,700",
+        "target_1": "957,900",
+        "current_price": "815,000",
+        "data_basis_date": "2026-06-26",
+        "detail_path": "details/034730.html",
+        "badges": [
+          "기관 +",
+          "거래량 급증"
+        ],
+        "reasons": [
+          "MACD 히스토그램 개선",
+          "ADX 38, +DI 우위",
+          "거래량 86% 증가"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 5.4% 높아 강한 매수로 표시하지 않습니다.",
+          "현재가가 EMA20보다 19.1% 높아 눌림목 진입으로 보기 어렵습니다."
+        ],
+        "observation": true
+      },
+      {
+        "code": "036570",
+        "name": "NC",
+        "market": "KOSPI",
+        "status": "관망",
+        "final_action": "관망",
+        "signal_type": "대기",
+        "direction_score": 61,
+        "entry_score": 78,
+        "rr_ratio": 7.58,
+        "entry_range": "240,400 ~ 246,800",
+        "stop_loss": "224,100",
+        "target_1": "258,900",
+        "current_price": "238,000",
+        "data_basis_date": "2026-06-26",
+        "detail_path": "details/036570.html",
+        "badges": [
+          "외국인 +",
+          "기관 +"
+        ],
+        "reasons": [
+          "MACD 히스토그램 개선",
+          "외국인 5일 순매수",
+          "기관 5일 순매수"
+        ],
+        "cautions": [
+          "명확한 진입 셋업 없음"
+        ],
+        "observation": true
+      },
+      {
+        "code": "032830",
+        "name": "삼성생명",
+        "market": "KOSPI",
+        "status": "관망",
+        "final_action": "관망",
+        "signal_type": "대기",
+        "direction_score": 61,
+        "entry_score": 66,
+        "rr_ratio": 2.0,
+        "entry_range": "407,400 ~ 424,400",
+        "stop_loss": "379,200",
+        "target_1": "516,500",
+        "current_price": "432,500",
+        "data_basis_date": "2026-06-26",
+        "detail_path": "details/032830.html",
+        "badges": [
+          "기관 +"
+        ],
+        "reasons": [
+          "ADX 30, +DI 우위",
+          "기관 5일 순매수"
+        ],
+        "cautions": [
+          "손절폭이 너무 좁거나 넓음",
+          "명확한 진입 셋업 없음"
+        ],
+        "observation": true
+      },
+      {
+        "code": "000810",
+        "name": "삼성화재",
+        "market": "KOSPI",
+        "status": "관망",
+        "final_action": "관망",
+        "signal_type": "대기",
+        "direction_score": 60,
+        "entry_score": 84,
+        "rr_ratio": 2.0,
+        "entry_range": "633,400 ~ 652,900",
+        "stop_loss": "575,000",
+        "target_1": "730,900",
+        "current_price": "636,000",
+        "data_basis_date": "2026-06-26",
+        "detail_path": "details/000810.html",
+        "badges": [
+          "외국인 +"
+        ],
+        "reasons": [
+          "ADX 32, +DI 우위",
+          "외국인 5일 순매수"
+        ],
+        "cautions": [
+          "명확한 진입 셋업 없음"
+        ],
+        "observation": true
+      },
+      {
+        "code": "271560",
+        "name": "오리온",
+        "market": "KOSPI",
+        "status": "관망",
+        "final_action": "관망",
+        "signal_type": "대기",
+        "direction_score": 59,
+        "entry_score": 84,
+        "rr_ratio": 3.09,
+        "entry_range": "125,500 ~ 127,400",
+        "stop_loss": "118,700",
+        "target_1": "138,500",
+        "current_price": "126,400",
+        "data_basis_date": "2026-06-26",
+        "detail_path": "details/271560.html",
+        "badges": [
+          "외국인 +"
+        ],
+        "reasons": [
+          "MACD 히스토그램 개선",
+          "거래량 35% 증가",
+          "외국인 5일 순매수"
+        ],
+        "cautions": [
+          "명확한 진입 셋업 없음"
+        ],
+        "observation": true
+      }
+    ]
+  },
+  "source_run_id": "28297639730",
+  "source_run_attempt": "1",
+  "source_workflow": "Update static mobile dashboard",
+  "source_commit": "9f782aa6cb3638711b0e9cb26e52c52766c4212d",
+  "source_branch": "main",
+  "deployed_at_kst": "2026-06-28 03:16 KST",
+  "build_id": "static-20260628-0316-9f782aa-28297639730",
+  "previous_success_generated_at": "2026-06-28 02:22 KST"
+}
