@@ -1,0 +1,964 @@
+{
+  "schema_version": "static-dashboard-v1",
+  "generated_at": "2026-07-24T18:30:59.119330+09:00",
+  "generated_at_kst": "2026-07-24 18:30 KST",
+  "ranking_generated_at": "2026-07-24T18:30:59.119330+09:00",
+  "ranking_generated_at_kst": "2026-07-24 18:30 KST",
+  "page_checked_at": "2026-07-24T18:30:59.119330+09:00",
+  "page_checked_at_kst": "2026-07-24 18:30 KST",
+  "market_session": "closed",
+  "market_session_label": "장외",
+  "heartbeat_mode": false,
+  "collection_status": "success",
+  "failure_message": "",
+  "realtime": {
+    "provider": "disabled",
+    "requested": false,
+    "configured": false,
+    "attempted": false,
+    "enabled": false,
+    "auth_success": false,
+    "quote_success_count": 0,
+    "quote_fail_count": 0,
+    "success_count": 0,
+    "fail_count": 0,
+    "skipped_reason": "kis_disabled",
+    "last_success_at_kst": "",
+    "error": "",
+    "diagnostic_hint": ""
+  },
+  "internet_quote": {
+    "enabled": true,
+    "provider": "naver_finance",
+    "attempted": true,
+    "success_count": 116,
+    "fail_count": 0,
+    "last_success_at_kst": "2026-07-24 18:30 KST",
+    "freshness_label": "인터넷 공개 현재가/일봉 기준",
+    "error": ""
+  },
+  "previous_result_used": false,
+  "market": "KOSPI",
+  "settings": {
+    "pages": 3,
+    "strictness": "보수적",
+    "count": 360,
+    "min_score": 70,
+    "include_watch": false,
+    "exclude_non_common": true,
+    "fill_observation_top10": true
+  },
+  "data_basis": {
+    "ranking_data": "인터넷 공개 현재가/일봉 데이터 기준",
+    "data_basis_date": "2026-07-24",
+    "last_collected_at": "2026-07-24 18:30 KST",
+    "realtime": "OFF",
+    "collection_method": "GitHub Actions 자동 수집",
+    "scanned_count": 116,
+    "result_count": 116,
+    "filtered_count": 5,
+    "display_count": 5
+  },
+  "freshness": {
+    "generated_at": "2026-07-24T18:30:59.119330+09:00",
+    "generated_at_kst": "2026-07-24 18:30 KST",
+    "refresh_interval_minutes": 10,
+    "stale_after_minutes": 15,
+    "very_stale_after_minutes": 30,
+    "stopped_after_minutes": 60,
+    "heartbeat_interval_minutes": 60,
+    "heartbeat_stale_after_minutes": 120,
+    "off_hours_stale_after_minutes": 90,
+    "off_hours_stopped_after_minutes": 180,
+    "off_hours_critical_after_minutes": 360
+  },
+  "market_state": {
+    "ok": false,
+    "score": 3,
+    "label": "시장 약세",
+    "reason": "지수 추세 약세"
+  },
+  "macro_brief": {
+    "updated_at": "2026-07-24T18:28+09:00",
+    "mode": "close",
+    "indexes": {
+      "nasdaq": {
+        "label": "NASDAQ",
+        "value": "25,137.69",
+        "change": "-2.15%",
+        "change_number": -2.1533,
+        "status": "available",
+        "market_time": 1784841359
+      },
+      "sp500": {
+        "label": "S&P500",
+        "value": "7,408.30",
+        "change": "-1.21%",
+        "change_number": -1.209,
+        "status": "available",
+        "market_time": 1784839147
+      },
+      "sox": {
+        "label": "SOX",
+        "value": "12,343.84",
+        "change": "-0.54%",
+        "change_number": -0.5385,
+        "status": "available",
+        "market_time": 1784841359
+      },
+      "vix": {
+        "label": "VIX",
+        "value": "18.72",
+        "change": "+0.11%",
+        "change_number": 0.107,
+        "status": "available",
+        "market_time": 1784884411
+      },
+      "usdkrw": {
+        "label": "USD/KRW",
+        "value": "1,462.60",
+        "change": "-0.78%",
+        "change_number": -0.7822,
+        "status": "available",
+        "market_time": 1784885314
+      },
+      "us10y": {
+        "label": "미국 10년물",
+        "value": "4.70%",
+        "change": "+0.05%p",
+        "change_number": 0.046,
+        "status": "available",
+        "market_time": 1784833195
+      },
+      "us2y": {
+        "label": "미국 2년물",
+        "value": null,
+        "change": null,
+        "status": "missing",
+        "error": "404 Client Error: Not Found for url: https://query1.finance.yahoo.com/v8/finance/chart/%5EUST2Y?interval=5m&range=5d&includePrePost=true"
+      },
+      "wti": {
+        "label": "WTI",
+        "value": "89.02",
+        "change": "-3.44%",
+        "change_number": -3.4386,
+        "status": "available",
+        "market_time": 1784884714
+      },
+      "dxy": {
+        "label": "DXY",
+        "value": "101.37",
+        "change": "-0.07%",
+        "change_number": -0.069,
+        "status": "available",
+        "market_time": 1784884714
+      }
+    },
+    "macro_judgment": "위험회피",
+    "market_judgment": "위험회피",
+    "market_summary": "금리·환율·VIX·유가 또는 지수 약세 신호가 겹쳐 변동성 관리가 우선입니다.",
+    "korea_takeaway": "방어주 상대강도 가능성, 성장주와 급등 종목 추격 주의",
+    "issues": [
+      {
+        "category": "inflation",
+        "title": "물가/CPI/PCE",
+        "summary": "물가 지표는 금리 인하 기대와 성장주 밸류 부담을 동시에 흔들 수 있습니다.",
+        "evidence_title": "ECB policymakers warn about growing inflation risks",
+        "impact": "risk_off",
+        "importance": 94,
+        "affected_assets": [
+          "US yields",
+          "NASDAQ",
+          "VIX"
+        ],
+        "affected_korea_sectors": [
+          "성장주",
+          "금융",
+          "소비"
+        ],
+        "source_count": 13,
+        "freshness": "latest",
+        "korea_impact": "성장주는 지표 발표 전후 변동성 확대 가능"
+      },
+      {
+        "category": "rates_fx",
+        "title": "국채금리/달러/환율",
+        "summary": "미국 금리와 달러 흐름은 한국 성장주와 외국인 수급 부담에 직접 연결됩니다.",
+        "evidence_title": "Treasury yields dollar exchange rate",
+        "impact": "risk_mixed",
+        "importance": 88,
+        "affected_assets": [
+          "DXY",
+          "USD/KRW",
+          "US yields"
+        ],
+        "affected_korea_sectors": [
+          "반도체",
+          "자동차",
+          "외국인 수급"
+        ],
+        "source_count": 1,
+        "freshness": "latest",
+        "korea_impact": "환율 부담 시 외국인 수급과 고밸류 성장주 주의"
+      },
+      {
+        "category": "indexes_volatility",
+        "title": "미국 지수/VIX",
+        "summary": "미국 지수와 VIX 흐름은 당일 위험선호·위험회피 판단의 기준입니다.",
+        "evidence_title": "Nasdaq S&P500 VIX stock market",
+        "impact": "risk_mixed",
+        "importance": 86,
+        "affected_assets": [
+          "NASDAQ",
+          "S&P500",
+          "VIX"
+        ],
+        "affected_korea_sectors": [
+          "성장주",
+          "방어주"
+        ],
+        "source_count": 1,
+        "freshness": "latest",
+        "korea_impact": "지수 방향보다 개별 종목 가격 위치와 손익비를 별도 확인"
+      },
+      {
+        "category": "oil_commodities",
+        "title": "유가/원자재",
+        "summary": "유가와 원자재 변동은 물가 기대와 운송·화학·에너지 업종에 영향을 줍니다.",
+        "evidence_title": "oil prices commodity inflation",
+        "impact": "risk_mixed",
+        "importance": 78,
+        "affected_assets": [
+          "WTI",
+          "inflation",
+          "energy"
+        ],
+        "affected_korea_sectors": [
+          "에너지",
+          "화학",
+          "운송"
+        ],
+        "source_count": 1,
+        "freshness": "latest",
+        "korea_impact": "에너지·방산·운송·화학 업종 차별화 가능"
+      },
+      {
+        "category": "recession_pmi",
+        "title": "경기/PMI/소비",
+        "summary": "PMI와 소비 지표는 경기민감주와 위험자산 선호를 가늠하는 보조 신호입니다.",
+        "evidence_title": "Euro zone business activity returns to growth in July for first time in four months, PMI shows",
+        "impact": "risk_mixed",
+        "importance": 70,
+        "affected_assets": [
+          "cyclicals",
+          "S&P500"
+        ],
+        "affected_korea_sectors": [
+          "자동차",
+          "조선",
+          "경기민감"
+        ],
+        "source_count": 13,
+        "freshness": "latest",
+        "korea_impact": "자동차·조선·소비·경기민감 업종 차별화 가능"
+      },
+      {
+        "title": "연준/FOMC",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "금리 경로 확인 전까지 성장주와 고밸류 업종 추격은 분리 대응이 필요합니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "고용/임금",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "고용 둔화와 임금 흐름은 경기민감주와 위험자산 선호에 영향을 줄 수 있습니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "반도체/AI/빅테크",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "SOX와 AI 대형주 흐름은 국내 반도체·인터넷·성장주 심리에 영향을 줄 수 있습니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      }
+    ],
+    "expanded_issues": [
+      {
+        "category": "inflation",
+        "title": "물가/CPI/PCE",
+        "summary": "물가 지표는 금리 인하 기대와 성장주 밸류 부담을 동시에 흔들 수 있습니다.",
+        "evidence_title": "ECB policymakers warn about growing inflation risks",
+        "impact": "risk_off",
+        "importance": 94,
+        "affected_assets": [
+          "US yields",
+          "NASDAQ",
+          "VIX"
+        ],
+        "affected_korea_sectors": [
+          "성장주",
+          "금융",
+          "소비"
+        ],
+        "source_count": 13,
+        "freshness": "latest",
+        "korea_impact": "성장주는 지표 발표 전후 변동성 확대 가능"
+      },
+      {
+        "category": "rates_fx",
+        "title": "국채금리/달러/환율",
+        "summary": "미국 금리와 달러 흐름은 한국 성장주와 외국인 수급 부담에 직접 연결됩니다.",
+        "evidence_title": "Treasury yields dollar exchange rate",
+        "impact": "risk_mixed",
+        "importance": 88,
+        "affected_assets": [
+          "DXY",
+          "USD/KRW",
+          "US yields"
+        ],
+        "affected_korea_sectors": [
+          "반도체",
+          "자동차",
+          "외국인 수급"
+        ],
+        "source_count": 1,
+        "freshness": "latest",
+        "korea_impact": "환율 부담 시 외국인 수급과 고밸류 성장주 주의"
+      },
+      {
+        "category": "indexes_volatility",
+        "title": "미국 지수/VIX",
+        "summary": "미국 지수와 VIX 흐름은 당일 위험선호·위험회피 판단의 기준입니다.",
+        "evidence_title": "Nasdaq S&P500 VIX stock market",
+        "impact": "risk_mixed",
+        "importance": 86,
+        "affected_assets": [
+          "NASDAQ",
+          "S&P500",
+          "VIX"
+        ],
+        "affected_korea_sectors": [
+          "성장주",
+          "방어주"
+        ],
+        "source_count": 1,
+        "freshness": "latest",
+        "korea_impact": "지수 방향보다 개별 종목 가격 위치와 손익비를 별도 확인"
+      },
+      {
+        "category": "oil_commodities",
+        "title": "유가/원자재",
+        "summary": "유가와 원자재 변동은 물가 기대와 운송·화학·에너지 업종에 영향을 줍니다.",
+        "evidence_title": "oil prices commodity inflation",
+        "impact": "risk_mixed",
+        "importance": 78,
+        "affected_assets": [
+          "WTI",
+          "inflation",
+          "energy"
+        ],
+        "affected_korea_sectors": [
+          "에너지",
+          "화학",
+          "운송"
+        ],
+        "source_count": 1,
+        "freshness": "latest",
+        "korea_impact": "에너지·방산·운송·화학 업종 차별화 가능"
+      },
+      {
+        "category": "recession_pmi",
+        "title": "경기/PMI/소비",
+        "summary": "PMI와 소비 지표는 경기민감주와 위험자산 선호를 가늠하는 보조 신호입니다.",
+        "evidence_title": "Euro zone business activity returns to growth in July for first time in four months, PMI shows",
+        "impact": "risk_mixed",
+        "importance": 70,
+        "affected_assets": [
+          "cyclicals",
+          "S&P500"
+        ],
+        "affected_korea_sectors": [
+          "자동차",
+          "조선",
+          "경기민감"
+        ],
+        "source_count": 13,
+        "freshness": "latest",
+        "korea_impact": "자동차·조선·소비·경기민감 업종 차별화 가능"
+      },
+      {
+        "title": "연준/FOMC",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "금리 경로 확인 전까지 성장주와 고밸류 업종 추격은 분리 대응이 필요합니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "고용/임금",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "고용 둔화와 임금 흐름은 경기민감주와 위험자산 선호에 영향을 줄 수 있습니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "반도체/AI/빅테크",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "SOX와 AI 대형주 흐름은 국내 반도체·인터넷·성장주 심리에 영향을 줄 수 있습니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "유가/지정학",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "유가와 지정학 리스크는 물가 부담과 위험회피 심리를 키울 수 있습니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "버핏/기관 수급",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "대형 기관과 장기투자자 흐름은 글로벌 위험 선호를 해석하는 참고값입니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      }
+    ],
+    "news_items": [
+      "물가 지표는 금리 인하 기대와 성장주 밸류 부담을 동시에 흔들 수 있습니다.",
+      "미국 금리와 달러 흐름은 한국 성장주와 외국인 수급 부담에 직접 연결됩니다.",
+      "미국 지수와 VIX 흐름은 당일 위험선호·위험회피 판단의 기준입니다.",
+      "유가와 원자재 변동은 물가 기대와 운송·화학·에너지 업종에 영향을 줍니다.",
+      "PMI와 소비 지표는 경기민감주와 위험자산 선호를 가늠하는 보조 신호입니다."
+    ],
+    "data_status": "available",
+    "news_provider": "gdelt+rss",
+    "news_fallback_used": true,
+    "news_source_count": 12,
+    "news_last_checked_at_kst": "2026-07-24 18:28 KST"
+  },
+  "us_breaking_news": {
+    "provider": "gdelt+rss",
+    "enabled": true,
+    "attempted": true,
+    "success_count": 12,
+    "hotpick_count": 12,
+    "fallback_used": true,
+    "fallback_reason": "partial_provider_failure",
+    "last_checked_at_kst": "2026-07-24 18:28 KST",
+    "last_success_at_kst": "2026-07-24 18:28 KST",
+    "provider_errors": {
+      "gdelt": "geopolitics_critical: GDELT public API rate limit; retry on the next scheduled run.; oil_shipping: GDELT public API rate limit; retry on the next scheduled run.; rates_macro: GDELT"
+    },
+    "fetch_error": "",
+    "items": [
+      {
+        "title": "Exclusive | Iran Missile Struck Housing Units for U.S. Troops at Jordan Base - WSJ",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPNFhTaWZKaDR3Q1J4d09ibDVFUlo2VUpHdWRBdXN6ZUs5UDg5ZUN4dmU1ZDcxTDNQblA4Ymp5bXA5U19IeTJoMkMxX19qWWpQbHI5Z1Z1WV9kejdMdHNDY0pjX0ZVdmx0alo2TUxlQWxLY0YwcmRNZmRJSS1MeEZ5MnFTd2NXNXZRTzlySV9kUFdSbU9HVG5mZXZFTmI5VU0tcnAwb0xiMA?oc=5",
+        "source": "WSJ",
+        "provider": "google_news_rss",
+        "published_at": "2026-07-21T00:01:00+00:00",
+        "published_at_kst": "2026-07-21 09:01 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "Iran war day 104: Iran attacks US bases, closes strait after Trump strikes - Al Jazeera",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNVWtvaC0tRFNQNEo1Z2J2dzNjb2VhZC1vUW5KR1dfQy1ZWEFOZkstd2pRd29PVlhEZDVockdIblZjY3puc1RzYnc0bUdsRmpqNTQ4RFlkUkliM3lKNVpiN1pzUlpwX0VESWhPQlAzbHNzamYxcnhpbmJ5bFpoWF9DekpxTXhnaDV2Vk43UWs5RFY0TUZveU5iTUZVSkFOQ19seUF3WE9GU2hCUHBnRkZv0gG0AUFVX3lxTE55OWNPRWlmMnBMak96c2pYNl9PcTZwU3UxcC1aTVFHeTgtal9ZQVBpa1hPVk9UdVA3OGJhdFplZmtfM2Y2X1VZaEdyS0I3Ym4zOEU5QkxlNUZBaW1HV2Vxd25RX1ROQ05yYVVnaDlMUzhPa09mc0FhNmprbnFFSjRXM2k5UUFOZC1NaUpNY2FXQkFGRXRIUC01ODRoS25PZ3VCQ0t",
+        "source": "Al Jazeera",
+        "provider": "google_news_rss",
+        "published_at": "2026-06-11T07:00:00+00:00",
+        "published_at_kst": "2026-06-11 16:00 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "U.S. strikes Iran after 2 service members killed, 1 missing in attack on Jordan base - The Washington Post",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNUDhIaFk3Yi1tNnR6Y3Y3QlhhUjVKSEp2bWJrLVJGQ3kyZ00yUUVrZ3AtV2JRS0ZmN1dCU25CUGFwNFVYLTd6QVRRV3dzNlpHN3lPX0xSaWxpX2laSkNxWmdKQnhNU25BRmJFNXFHM1lHZFJIckZnVllzenNRS081NWhpR2xVQ0ZfT0NDXzV2M2FTdHlPUXpPTWdRdXBKR0xJOUdqWUwyYTN2Rlly?oc=5",
+        "source": "The Washington Post",
+        "provider": "google_news_rss",
+        "published_at": "2026-07-19T05:57:00+00:00",
+        "published_at_kst": "2026-07-19 14:57 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "U.S. launches new strikes in Iran after missiles target American bases - PBS",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNX0lYWDhaWGpOdEhhUnJfVHhUeTlSaHJNNGNONVJNelFrelJfUnUyVlZ1MEdRTGoyVmRURjZyM2lDRW54VW1kaHNUOFdKSkxPTnU1T1Bfbks1SFhBWGpLN1VSQURTVXBXUDNkZzFXalkxS2M3QjZqMHRIelBoVTRUeUpzQTRPTmRaeS1kNEJ5d19uNlk5RjNfRXdhRFFsSFJEY01mNktR?oc=5",
+        "source": "PBS",
+        "provider": "google_news_rss",
+        "published_at": "2026-06-10T07:00:00+00:00",
+        "published_at_kst": "2026-06-10 16:00 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "Iran targets US bases in Jordan, Kuwait and Bahrain after Trump orders strikes near Strait of Hormuz - New York Post",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNNnkxRDRzaDdjTjlmU1k4V0J6QXRHVGlTRmlmOFdsYlVYMk5PeEpXaGVWNkNnaTBOUVNuWTlVTTUzTXF5NXZncTdITHBUVGp5RmV0c0VtVUFHeTZUbUJ1M0hMTnIwNzZyTUZhWE83aU0xWWhVM2UtMmY2akRyaXBucjJXbDFQcTJTc2tnLWZ3bFVDQmVZVkZnODFtTmM3aXV5MHBsMnR6RTZrY2RyUXk4NVVNY25KU2xVanJFa3RWY2xmVDg?oc=5",
+        "source": "New York Post",
+        "provider": "google_news_rss",
+        "published_at": "2026-06-10T07:00:00+00:00",
+        "published_at_kst": "2026-06-10 16:00 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "Four Americans Killed as Iran Attacks US Troops in Jordan, Iraq - Air & Space Forces Magazine",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPemtiUjZpYks1aWFabVItbEJlT01lTmx4blJONElNYU9jemZMNFFpWWgtaUo3ZjBaalpSVkFHRnd5VlJzM1NSTTlRNzFrYUFJbTFZUWlZdmRsN0s1cVV1R1ZHOVdCV2pGMkVhMVJUUjVZYi1XeGhZeFhXdFVLcEZwcVhFMzR0N1dUMzdNcDhRakNWSUE4Wkt1cklJeXB0SnJ1Z0E?oc=5",
+        "source": "Air & Space Forces Magazine",
+        "provider": "google_news_rss",
+        "published_at": "2026-07-18T18:06:17+00:00",
+        "published_at_kst": "2026-07-19 03:06 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "Truce at Risk: Iranian Ballistic Missile Hits US Base in Kuwait Amid Peace Talks - Kyiv Post",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBCdUx2c0tGWGRyNFFKN3AtcEFkbkdFWjJSV2JpdGZlTHA1X3dTNGhYMzRFSURtWnJ3cEV2bkg1d1JqZ2xoS0JOV1RoWQ?oc=5",
+        "source": "Kyiv Post",
+        "provider": "google_news_rss",
+        "published_at": "2026-05-30T07:00:00+00:00",
+        "published_at_kst": "2026-05-30 16:00 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "Iranian missiles show deadly precision amid US-Iran war escalation - Al Jazeera",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZGtKR205NVlpZi1lRFlrUTJDNWdYZFNETUNjZUw5TlN2R1JPa25SZTc1aE91dUhyTlBNb1B2MTF6LVFUWkE1aG1kbnZsYVZzWTE4LUNaOXlrYTMzZDZUdU4xM290ci1fdkEwWmxhSDJIS2hWT2dkazBlVkt6ZVhzY1gzVzZrd200MThiRnhzbTVoY3FqZVZlbWtDdXFyUWpxdktETkJXUHBCOFHSAbABQVVfeXFMT2J4SnpsYzJIV0J2Q29zNkV1OWVyanFzOV83MnlwcnZlYVJCdVBLZDZRaGh2RTI5SGpxMm5FUFNFUUh4emFnVENzdVFCYmpKel9fYnY3RmtWNThXY2hjQm9RQ2g0NERIbWh5ejQzekRYc1Q1dHFoalFfaWZfclRoWmtVbk5TSzRFZlhKWXU3YTh2cUVnQU5zTmlNbkRGZmFxU3VGMHllOU5",
+        "source": "Al Jazeera",
+        "provider": "google_news_rss",
+        "published_at": "2026-07-22T22:10:00+00:00",
+        "published_at_kst": "2026-07-23 07:10 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "U.S. and Iranian attacks continue as tensions mount on a key waterway in the Red Sea - NPR",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBmVHBOV1ItYWFfdHBVZmEyQnRtTnlvVVozMjA3UnMzbFBZWDh0YmpwTHZXM2k3SUtJcGZDSlpNWklVNzhkMkxNRnQ4emZRR2VWdm1CbXo0QkR3M2ZVeEpDM1RsTjExanBVdHJqcw?oc=5",
+        "source": "NPR",
+        "provider": "google_news_rss",
+        "published_at": "2026-07-22T10:46:01+00:00",
+        "published_at_kst": "2026-07-22 19:46 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "Iran Claims New Attacks on US Bases in Jordan and Kuwait - IranWire",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQYVo0NkUyNlJmSmVhbGJLTnBsNkcyWkFDdzhqNENOZEhic1lnaVNYb1hURHg3aTJMdXEwWlViNEhiZVZEemlCUkVIdXpjSXJfMXZoNm1hdFBCWFF1dWNTaU1jQm1KRllocVM1VzZBZ3htQk42YjFaYl9wS2FzWGxRRVc4TDRSU3dueGRaWi1yZ1NfSkx1MFVkeA?oc=5",
+        "source": "IranWire",
+        "provider": "google_news_rss",
+        "published_at": "2026-07-23T11:28:51+00:00",
+        "published_at_kst": "2026-07-23 20:28 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "3 missiles struck US base in Jordan within 24 hours, killing 2 troops: Report - Anadolu Ajansı",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQYTBLMmFDbWdlM1c2Zi1DOHZKUGhLUmwzTzUzc0VSZW5JajZfTWE2Skt3aDhjYVNFMjQtN2RWdFV4eG02ZXd3Y01OZkVobXA4YndlRVhIRFVNdWlCWnZ1LWZXQkF0Z0xWQmZFaFRJYWQ2RkRFNFI2azlVMkxfZzNZcUdueHFxQ0NlZVB0SVhINzlhdkFsUWM4Z3hHZ2RDWUp3Qko4UTk1UlRLUVJLc2gxYUw4dkhVSlczRWFHZkZjRlo2dFBWN3c?oc=5",
+        "source": "Anadolu Ajansı",
+        "provider": "google_news_rss",
+        "published_at": "2026-07-20T20:48:24+00:00",
+        "published_at_kst": "2026-07-21 05:48 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "Iran’s frightening missile accuracy sparks fears adversaries are helping Tehran target US troops, CIA sites - New York Post",
+        "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOZEhCaTNRX2NiOUdRaEFLRGRFQWlmbG1leUY2V2NpcWpsbUpXelF5V1FVQ1FNWVpPN1FmcGRCSWJiSHN3V3NONzNjLWRzSXd2aENMUk1EUHJ3MU1acW94UElXSkViQ2dmUXc3VVRrRmh2TkwxcnFMXy1EekJQVGlaYlpXTVNId3FUd2ViWmpoSWg5bEFZVVJaNFNhU1hvdElIR1NkYndTdUp6dC1lVU50MmJMVWR5OWhpSU1qOERmdTkzblViOS1MX2F3YU8zTE4talFhUGg0TDdsZUU?oc=5",
+        "source": "New York Post",
+        "provider": "google_news_rss",
+        "published_at": "2026-07-23T20:19:00+00:00",
+        "published_at_kst": "2026-07-24 05:19 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      }
+    ],
+    "fallback_message": ""
+  },
+  "rankings": {
+    "qualified": [
+      {
+        "code": "001450",
+        "name": "현대해상",
+        "market": "KOSPI",
+        "status": "눌림 대기",
+        "final_action": "눌림 확인",
+        "signal_type": "돌파 후 재확인",
+        "direction_score": 77,
+        "entry_score": 77,
+        "rr_ratio": 2.0,
+        "entry_range": "39,450 ~ 40,450",
+        "stop_loss": "36,950",
+        "target_1": "45,450",
+        "current_price": "40,350",
+        "data_basis_date": "2026-07-24",
+        "detail_path": "details/001450.html",
+        "badges": [
+          "외국인 +",
+          "기관 +"
+        ],
+        "reasons": [
+          "돌파 가격 재확인 구간",
+          "MACD 히스토그램 개선",
+          "거래량 46% 증가"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 0.1% 높아 강한 매수로 표시하지 않습니다."
+        ],
+        "observation": false
+      },
+      {
+        "code": "011200",
+        "name": "HMM",
+        "market": "KOSPI",
+        "status": "눌림 대기",
+        "final_action": "눌림 확인",
+        "signal_type": "박스권 돌파",
+        "direction_score": 71,
+        "entry_score": 70,
+        "rr_ratio": 2.0,
+        "entry_range": "20,850 ~ 21,250",
+        "stop_loss": "20,350",
+        "target_1": "23,650",
+        "current_price": "21,650",
+        "data_basis_date": "2026-07-24",
+        "detail_path": "details/011200.html",
+        "badges": [
+          "외국인 +",
+          "기관 +",
+          "거래량 급증"
+        ],
+        "reasons": [
+          "20일 고점 돌파와 거래량 증가",
+          "돌파 가격 재확인 구간",
+          "MACD 히스토그램 개선"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 2.1% 높아 강한 매수로 표시하지 않습니다.",
+          "현재가가 EMA20보다 8.0% 높아 눌림목 진입으로 보기 어렵습니다."
+        ],
+        "observation": false
+      },
+      {
+        "code": "138040",
+        "name": "메리츠금융지주",
+        "market": "KOSPI",
+        "status": "눌림 대기",
+        "final_action": "눌림 확인",
+        "signal_type": "박스권 돌파",
+        "direction_score": 71,
+        "entry_score": 65,
+        "rr_ratio": 2.0,
+        "entry_range": "117,900 ~ 120,100",
+        "stop_loss": "115,700",
+        "target_1": "134,700",
+        "current_price": "123,300",
+        "data_basis_date": "2026-07-24",
+        "detail_path": "details/138040.html",
+        "badges": [
+          "외국인 +",
+          "기관 +",
+          "거래량 급증"
+        ],
+        "reasons": [
+          "20일 고점 돌파와 거래량 증가",
+          "돌파 가격 재확인 구간",
+          "MACD 히스토그램 개선"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 2.9% 높아 강한 매수로 표시하지 않습니다.",
+          "현재가가 EMA20보다 8.4% 높아 눌림목 진입으로 보기 어렵습니다."
+        ],
+        "observation": false
+      },
+      {
+        "code": "033780",
+        "name": "KT&G",
+        "market": "KOSPI",
+        "status": "눌림 대기",
+        "final_action": "눌림 확인",
+        "signal_type": "상승추세 눌림목",
+        "direction_score": 70,
+        "entry_score": 88,
+        "rr_ratio": 2.0,
+        "entry_range": "178,000 ~ 180,600",
+        "stop_loss": "172,000",
+        "target_1": "198,600",
+        "current_price": "182,600",
+        "data_basis_date": "2026-07-24",
+        "detail_path": "details/033780.html",
+        "badges": [
+          "외국인 +"
+        ],
+        "reasons": [
+          "상승추세 안에서 EMA/VWAP 눌림 후 재상승",
+          "MACD 히스토그램 개선",
+          "외국인 5일 순매수"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 1.3% 높아 강한 매수로 표시하지 않습니다."
+        ],
+        "observation": false
+      },
+      {
+        "code": "000810",
+        "name": "삼성화재",
+        "market": "KOSPI",
+        "status": "관심",
+        "final_action": "관심",
+        "signal_type": "상승추세 눌림목",
+        "direction_score": 70,
+        "entry_score": 96,
+        "rr_ratio": 2.0,
+        "entry_range": "631,100 ~ 651,200",
+        "stop_loss": "581,000",
+        "target_1": "757,000",
+        "current_price": "644,000",
+        "data_basis_date": "2026-07-24",
+        "detail_path": "details/000810.html",
+        "badges": [
+          "관심",
+          "외국인 +",
+          "상승 다이버전스"
+        ],
+        "reasons": [
+          "상승추세 안에서 EMA/VWAP 눌림 후 재상승",
+          "MACD 히스토그램 개선",
+          "외국인 5일 순매수"
+        ],
+        "cautions": [
+          "시장 추세가 약해 신규 진입 점수 제한"
+        ],
+        "observation": false
+      }
+    ],
+    "supplemental": [
+      {
+        "code": "138930",
+        "name": "BNK금융지주",
+        "market": "KOSPI",
+        "status": "눌림 대기",
+        "final_action": "눌림 확인",
+        "signal_type": "상승추세 눌림목",
+        "direction_score": 65,
+        "entry_score": 88,
+        "rr_ratio": 2.0,
+        "entry_range": "17,700 ~ 18,050",
+        "stop_loss": "16,750",
+        "target_1": "20,000",
+        "current_price": "18,040",
+        "data_basis_date": "2026-07-24",
+        "detail_path": "details/138930.html",
+        "badges": [
+          "외국인 +"
+        ],
+        "reasons": [
+          "상승추세 안에서 EMA/VWAP 눌림 후 재상승",
+          "MACD 히스토그램 개선",
+          "외국인 5일 순매수"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 0.2% 높아 강한 매수로 표시하지 않습니다."
+        ],
+        "observation": true
+      },
+      {
+        "code": "028050",
+        "name": "삼성E&A",
+        "market": "KOSPI",
+        "status": "눌림 대기",
+        "final_action": "눌림 확인",
+        "signal_type": "대기",
+        "direction_score": 50,
+        "entry_score": 52,
+        "rr_ratio": 3.4,
+        "entry_range": "44,900 ~ 47,100",
+        "stop_loss": "41,800",
+        "target_1": "56,300",
+        "current_price": "47,600",
+        "data_basis_date": "2026-07-24",
+        "detail_path": "details/028050.html",
+        "badges": [
+          "외국인 +",
+          "기관 +",
+          "거래량 급증"
+        ],
+        "reasons": [
+          "MACD 히스토그램 개선",
+          "거래량 91% 증가",
+          "외국인 5일 순매수"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 2.1% 높아 강한 매수로 표시하지 않습니다."
+        ],
+        "observation": true
+      },
+      {
+        "code": "111770",
+        "name": "영원무역",
+        "market": "KOSPI",
+        "status": "눌림 대기",
+        "final_action": "눌림 확인",
+        "signal_type": "대기",
+        "direction_score": 46,
+        "entry_score": 76,
+        "rr_ratio": 2.0,
+        "entry_range": "85,800 ~ 87,650",
+        "stop_loss": "80,000",
+        "target_1": "99,250",
+        "current_price": "87,700",
+        "data_basis_date": "2026-07-24",
+        "detail_path": "details/111770.html",
+        "badges": [
+          "기관 +"
+        ],
+        "reasons": [
+          "ADX 28, +DI 우위",
+          "기관 5일 순매수"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 0.2% 높아 강한 매수로 표시하지 않습니다."
+        ],
+        "observation": true
+      },
+      {
+        "code": "010130",
+        "name": "고려아연",
+        "market": "KOSPI",
+        "status": "눌림 대기",
+        "final_action": "눌림 확인",
+        "signal_type": "대기",
+        "direction_score": 44,
+        "entry_score": 76,
+        "rr_ratio": 7.03,
+        "entry_range": "1,042,700 ~ 1,075,100",
+        "stop_loss": "973,900",
+        "target_1": "1,226,700",
+        "current_price": "1,075,000",
+        "data_basis_date": "2026-07-24",
+        "detail_path": "details/010130.html",
+        "badges": [
+          "외국인 +",
+          "기관 +"
+        ],
+        "reasons": [
+          "MACD 히스토그램 개선",
+          "거래량 15% 증가",
+          "외국인 5일 순매수"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 0.6% 높아 강한 매수로 표시하지 않습니다."
+        ],
+        "observation": true
+      },
+      {
+        "code": "175330",
+        "name": "JB금융지주",
+        "market": "KOSPI",
+        "status": "눌림 대기",
+        "final_action": "눌림 확인",
+        "signal_type": "대기",
+        "direction_score": 40,
+        "entry_score": 71,
+        "rr_ratio": 2.0,
+        "entry_range": "25,850 ~ 26,700",
+        "stop_loss": "24,350",
+        "target_1": "30,750",
+        "current_price": "26,900",
+        "data_basis_date": "2026-07-24",
+        "detail_path": "details/175330.html",
+        "badges": [
+          "외국인 +"
+        ],
+        "reasons": [
+          "MACD 히스토그램 개선",
+          "외국인 5일 순매수"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 1.3% 높아 강한 매수로 표시하지 않습니다."
+        ],
+        "observation": true
+      }
+    ]
+  },
+  "source_run_id": "30082682360",
+  "source_run_attempt": "1",
+  "source_workflow": "Update static mobile dashboard",
+  "source_commit": "1cec516a8f26fb15da5b5e61b40b172a3e81a591",
+  "source_branch": "main",
+  "deployed_at_kst": "2026-07-24 18:30 KST",
+  "build_id": "static-20260724-1830-1cec516-30082682360",
+  "previous_success_generated_at": "2026-07-24 18:22 KST"
+}
