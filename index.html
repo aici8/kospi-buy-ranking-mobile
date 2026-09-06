@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="300">
+  <title>매수랭킹 모바일 대시보드</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">GitHub Actions 자동 수집</p>
+      <h1>매수랭킹 모바일 대시보드</h1>
+      <p>계산은 서버 접속 시점이 아니라 GitHub Actions에서 미리 수행됩니다.</p>
+    </section>
+    
+    
+    <section class="alert stale">현재는 장외/휴장 시간입니다. 데이터 기준일은 마지막 거래일이며, KIS 호출 없이 인터넷 공개 데이터 기준으로 재계산됩니다.</section>
+    
+    
+    
+    <section class="summary">
+      <div><span>랭킹 계산</span><b>2026-09-07 04:07 KST</b><small id="ranking-age">계산 기준</small></div>
+      <div><span>자동화 점검</span><b>2026-09-07 04:07 KST</b><small id="update-age">점검 중</small></div>
+      <div><span>데이터 기준일</span><b>2026-09-04</b></div>
+      <div><span>시장 상태</span><b>장외</b><small>인터넷 공개 데이터 기준</small></div>
+      <div><span>조건 통과</span><b>4개</b></div>
+      <div><span>배포 빌드</span><b>34053769167</b><small>static-20260907-0407-1cec516-34053769167</small></div>
+    </section>
+    <section class="alert stale" id="freshness-alert" hidden></section>
+    <section class="notice">현재는 장외/휴장 시간입니다. 데이터 기준일은 마지막 거래일이며, 랭킹은 최신 가능 데이터 기준으로 재계산됩니다. 장외에는 KIS 현재가 호출을 생략합니다.</section>
+    <section class="notice">KIS 실시간 현재가는 사용하지 않습니다. 랭킹은 네이버 금융 등 인터넷 공개 현재가와 일봉 차트 데이터 기준으로 계산됩니다.</section>
+    <section class="notice">이 대시보드는 GitHub Actions가 주기적으로 생성한 화면입니다. 기본값은 KIS를 사용하지 않는 인터넷 공개 현재가/일봉 데이터 기준이며, 공개 데이터 특성상 지연 또는 누락이 있을 수 있습니다. 아이폰에서 열어둔 화면은 5분마다 자동 새로고침됩니다.</section>
+    <section class="notice">이 화면은 자동 매수 지시가 아니라 조건 기반 후보 선별 화면입니다. 높은 상승기대 점수는 즉시 매수 지시가 아니며, 진입 점수·손익비·손절 기준을 함께 확인해야 합니다.</section>
+    <section class="panel">
+      <div class="section-head"><h2>미국장·매크로 브리프</h2><span>close</span></div>
+      <div class="metrics"><div class="metric"><span>NASDAQ</span><b>26,506.99 <span>-0.29%</span></b></div>
+<div class="metric"><span>S&amp;P500</span><b>7,718.60 <span>-0.38%</span></b></div>
+<div class="metric"><span>SOX</span><b>11,735.26 <span>+3.38%</span></b></div>
+<div class="metric"><span>VIX</span><b>14.53 <span>+1.47%</span></b></div>
+<div class="metric"><span>USD/KRW</span><b>1,345.99 <span>-0.73%</span></b></div>
+<div class="metric"><span>미국 10년물</span><b>4.78% <span>+0.02%p</span></b></div>
+<div class="metric"><span>미국 2년물</span><b>확인 필요</b></div>
+<div class="metric"><span>WTI</span><b>91.48 <span>+0.20%</span></b></div>
+<div class="metric"><span>DXY</span><b>99.16 <span>-0.02%</span></b></div></div>
+      <h3>핵심 매크로 이슈</h3>
+      <ul class="issues"><li><b>국채금리/달러/환율</b><p>미국 금리와 달러 흐름은 한국 성장주와 외국인 수급 부담에 직접 연결됩니다.</p><small>환율 부담 시 외국인 수급과 고밸류 성장주 주의</small></li>
+<li><b>미국 지수/VIX</b><p>미국 지수와 VIX 흐름은 당일 위험선호·위험회피 판단의 기준입니다.</p><small>지수 방향보다 개별 종목 가격 위치와 손익비를 별도 확인</small></li>
+<li><b>반도체/AI/빅테크</b><p>AI·반도체·빅테크 흐름은 국내 반도체와 성장주 심리에 영향을 줄 수 있습니다.</p><small>반도체 우호 가능성, 급등주는 추격보다 진입 조건 분리 확인</small></li>
+<li><b>유가/원자재</b><p>유가와 원자재 변동은 물가 기대와 운송·화학·에너지 업종에 영향을 줍니다.</p><small>에너지·방산·운송·화학 업종 차별화 가능</small></li>
+<li><b>연준/FOMC</b><p>관련 뉴스 확인 필요</p><small>금리 경로 확인 전까지 성장주와 고밸류 업종 추격은 분리 대응이 필요합니다.</small></li>
+<li><b>물가/CPI/PCE</b><p>관련 뉴스 확인 필요</p><small>물가 지표는 금리 기대와 성장주 밸류 부담을 흔들 수 있습니다.</small></li>
+<li><b>고용/임금</b><p>관련 뉴스 확인 필요</p><small>고용 둔화와 임금 흐름은 경기민감주와 위험자산 선호에 영향을 줄 수 있습니다.</small></li>
+<li><b>유가/지정학</b><p>관련 뉴스 확인 필요</p><small>유가와 지정학 리스크는 물가 부담과 위험회피 심리를 키울 수 있습니다.</small></li></ul>
+    </section>
+    <section class="panel">
+      <div class="section-head"><h2>미국 핵심뉴스·속보</h2><span>2026-09-07 04:05 KST</span></div>
+      <p class="panel-note">뉴스는 GDELT 등 공개 뉴스 메타데이터를 기반으로 제목·출처·링크 중심으로 반영합니다.</p>
+      <div class="news-list">
+<article class="news-card hotpick">
+  <div class="news-top"><span class="news-badge">긴급 지정학/유가</span><small>100점</small></div>
+  <h3>Iran warns of tougher response : Oil , gold and stocks to watch over the holiday weekend</h3>
+  <p class="news-meta">investinglive.com · 2026-09-07 01:00 KST</p>
+  <p class="news-impact">중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.</p>
+  <a class="source-link" href="https://investinglive.com/news/iran-warns-of-tougher-response-oil-gold-and-stocks-to-watch-over-the-holiday-weekend/" target="_blank" rel="noopener noreferrer">원문 보기</a>
+</article>
+
+
+<article class="news-card ">
+  <div class="news-top"><span class="news-badge">지수/변동성</span><small>100점</small></div>
+  <h3>Investment Analyst Downgrades for September 6th ( AIIO , AON , ARI , AUGO , BMEA , CLS , HUYA , LI , LION , LWLG )</h3>
+  <p class="news-meta">dailypolitical.com · 2026-09-07 03:15 KST</p>
+  <p class="news-impact">미국 지수와 VIX 흐름은 당일 위험선호·위험회피 판단의 참고값입니다.</p>
+  <a class="source-link" href="https://www.dailypolitical.com/2026/09/06/investment-analysts-downgrades-for-september-6th-aiio-aon-ari-augo-bmea-cls-huya-li-lion-lwlg.html" target="_blank" rel="noopener noreferrer">원문 보기</a>
+</article>
+
+
+<article class="news-card ">
+  <div class="news-top"><span class="news-badge">금리/달러</span><small>100점</small></div>
+  <h3>Stock Market Week Ahead : Week Of The Big Bond Scheme</h3>
+  <p class="news-meta">investors.com · 2026-09-07 01:30 KST</p>
+  <p class="news-impact">미국 금리·달러 흐름은 한국 성장주와 외국인 수급 부담을 흔들 수 있습니다.</p>
+  <a class="source-link" href="https://www.investors.com/research/investing-action-plan/stock-market-week-ahead-week-of-the-big-bond-scheme/" target="_blank" rel="noopener noreferrer">원문 보기</a>
+</article>
+
+
+<article class="news-card ">
+  <div class="news-top"><span class="news-badge">금리/달러</span><small>100점</small></div>
+  <h3>A Fed Rate Hike May Be in the Cards on Sept . 16 , and 36 Years of History Says the Stock Market Wont Be Happy ( at Least Initially )</h3>
+  <p class="news-meta">aol.com · 2026-09-07 01:00 KST</p>
+  <p class="news-impact">미국 금리·달러 흐름은 한국 성장주와 외국인 수급 부담을 흔들 수 있습니다.</p>
+  <a class="source-link" href="https://www.aol.com/articles/fed-rate-hike-may-cards-152601000.html" target="_blank" rel="noopener noreferrer">원문 보기</a>
+</article>
+
+
+<article class="news-card ">
+  <div class="news-top"><span class="news-badge">금리/달러</span><small>100점</small></div>
+  <h3>Stock Market Investors Just Got a Warning From the Federal Reserve . History Says This Will Happen Next .</h3>
+  <p class="news-meta">fool.com · 2026-09-06 18:45 KST</p>
+  <p class="news-impact">미국 금리·달러 흐름은 한국 성장주와 외국인 수급 부담을 흔들 수 있습니다.</p>
+  <a class="source-link" href="https://www.fool.com/investing/2026/09/06/stock-market-investors-warning-federal-reserve/" target="_blank" rel="noopener noreferrer">원문 보기</a>
+</article>
+
+
+<article class="news-card ">
+  <div class="news-top"><span class="news-badge">금리/달러</span><small>100점</small></div>
+  <h3>August Job Gains Blew Past Estimates . Here What It Means for the Fed .</h3>
+  <p class="news-meta">finance.yahoo.com · 2026-09-06 12:45 KST</p>
+  <p class="news-impact">미국 금리·달러 흐름은 한국 성장주와 외국인 수급 부담을 흔들 수 있습니다.</p>
+  <a class="source-link" href="https://finance.yahoo.com/economy/policy/articles/august-job-gains-blew-past-030500568.html" target="_blank" rel="noopener noreferrer">원문 보기</a>
+</article>
+
+
+<article class="news-card ">
+  <div class="news-top"><span class="news-badge">금리/달러</span><small>100점</small></div>
+  <h3>Wall Street ends lower as solid jobs data fuels hawkish Fed bets</h3>
+  <p class="news-meta">mvariety.com · 2026-09-06 04:30 KST</p>
+  <p class="news-impact">미국 금리·달러 흐름은 한국 성장주와 외국인 수급 부담을 흔들 수 있습니다.</p>
+  <a class="source-link" href="https://www.mvariety.com/business/business_news/wall-street-ends-lower-as-solid-jobs-data-fuels-hawkish-fed-bets/article_da2d563e-a907-4955-be76-8d0e71e9452a.html" target="_blank" rel="noopener noreferrer">원문 보기</a>
+</article>
+
+
+<article class="news-card ">
+  <div class="news-top"><span class="news-badge">지수/변동성</span><small>88점</small></div>
+  <h3>Polymarket Launches Crypto Perpetual Futures With Up to 20x Leverage</h3>
+  <p class="news-meta">finance.yahoo.com · 2026-09-06 12:15 KST</p>
+  <p class="news-impact">미국 지수와 VIX 흐름은 당일 위험선호·위험회피 판단의 참고값입니다.</p>
+  <a class="source-link" href="https://finance.yahoo.com/markets/crypto/articles/polymarket-launches-crypto-perpetual-futures-203103778.html" target="_blank" rel="noopener noreferrer">원문 보기</a>
+</article>
+
+
+<article class="news-card ">
+  <div class="news-top"><span class="news-badge">유가/지정학</span><small>82점</small></div>
+  <h3>How Asian markets , crude will impact Sensex , Nifty tomorrow : What GIFT Nifty , Nikkei , Kospi , Taiwan signal for India</h3>
+  <p class="news-meta">livemint.com · 2026-09-06 17:30 KST</p>
+  <p class="news-impact">유가·지정학 뉴스는 물가 부담, 방산·에너지·운송 업종 변동성에 연결됩니다.</p>
+  <a class="source-link" href="https://www.livemint.com/market/stock-market-news/how-asian-markets-crude-will-impact-sensex-nifty-tomorrow-what-gift-nifty-nikkei-kospi-taiwan-signal-for-india-11788673692892.html" target="_blank" rel="noopener noreferrer">원문 보기</a>
+</article>
+
+
+<article class="news-card ">
+  <div class="news-top"><span class="news-badge">실적/가이던스</span><small>76점</small></div>
+  <h3>US Market Outlook : Support holds well - The HinduBusinessLine</h3>
+  <p class="news-meta">thehindubusinessline.com · 2026-09-06 04:30 KST</p>
+  <p class="news-impact">미국 대형주 실적·가이던스는 국내 성장주와 관련 업종 심리에 영향을 줄 수 있습니다.</p>
+  <a class="source-link" href="https://www.thehindubusinessline.com/portfolio/technical-analysis/us-market-outlook-support-holds-well/article71430926.ece" target="_blank" rel="noopener noreferrer">원문 보기</a>
+</article>
+
+
+<article class="news-card ">
+  <div class="news-top"><span class="news-badge">기타</span><small>57점</small></div>
+  <h3>Investment Analyst Upgrades for September 6th ( ADSK , AMIX , ARGX , ASYS , BBAR , BE , BJDX , CPAY , DXCM , EFSI )</h3>
+  <p class="news-meta">themarketsdaily.com · 2026-09-07 03:15 KST</p>
+  <p class="news-impact">미국장 일반 뉴스로, 개별 종목 진입 조건을 대체하지 않습니다.</p>
+  <a class="source-link" href="https://www.themarketsdaily.com/2026/09/06/investment-analysts-upgrades-for-september-6th-adsk-amix-argx-asys-bbar-be-bjdx-cpay-dxcm-efsi.html" target="_blank" rel="noopener noreferrer">원문 보기</a>
+</article>
+
+
+<article class="news-card ">
+  <div class="news-top"><span class="news-badge">기타</span><small>57점</small></div>
+  <h3>Where Will SCHD Stock Be in 5 Years ? | The Motley Fool</h3>
+  <p class="news-meta">fool.com · 2026-09-07 02:45 KST</p>
+  <p class="news-impact">미국장 일반 뉴스로, 개별 종목 진입 조건을 대체하지 않습니다.</p>
+  <a class="source-link" href="https://www.fool.com/investing/2026/09/06/where-will-schd-stock-be-in-5-years/?source=iedfolrf0000001" target="_blank" rel="noopener noreferrer">원문 보기</a>
+</article>
+</div>
+      <p class="panel-note">뉴스는 GDELT·Google News RSS 등 공개 뉴스 메타데이터를 기반으로 제목·출처·링크 중심으로 반영합니다. 시장 환경 참고용이며 자동 매수 지시가 아닙니다. 기사 본문 전문은 저장하거나 표시하지 않습니다.</p>
+    </section>
+    <section class="panel">
+      <div class="section-head"><h2>조건 통과 후보</h2><span>최대 10개 표시</span></div>
+      
+<article class="card ">
+  <div class="card-head"><div><strong>1. 대한항공</strong><span>003490</span></div><em>눌림 확인</em></div>
+  <div class="grid">
+    <div><span>상승기대</span><b>78점</b></div>
+    <div><span>진입 점수</span><b>70점</b></div>
+    <div><span>손익비</span><b>2.0</b></div>
+    <div><span>현재가</span><b>30,200</b></div>
+    <div><span>권장 진입가</span><b>29,550 ~ 30,050</b></div>
+    <div><span>손절가</span><b>28,550</b></div>
+    <div><span>1차 매도가</span><b>32,700</b></div>
+    <div><span>데이터 기준일</span><b>2026-09-04</b></div>
+  </div>
+  <p class="reason">20일 고점 돌파와 거래량 증가 · 돌파 가격 재확인 구간 · MACD 히스토그램 개선</p>
+  <p class="caution">현재가가 권장 진입가 상단보다 0.8% 높아 강한 매수로 표시하지 않습니다. · 현재가가 EMA20보다 9.3% 높아 눌림목 진입으로 보기 어렵습니다.</p>
+  <a class="detail-button" href="details/003490.html">상세보기</a>
+</article>
+
+
+<article class="card ">
+  <div class="card-head"><div><strong>2. 한진칼</strong><span>180640</span></div><em>눌림 확인</em></div>
+  <div class="grid">
+    <div><span>상승기대</span><b>72점</b></div>
+    <div><span>진입 점수</span><b>65점</b></div>
+    <div><span>손익비</span><b>2.0</b></div>
+    <div><span>현재가</span><b>146,000</b></div>
+    <div><span>권장 진입가</span><b>142,000 ~ 145,400</b></div>
+    <div><span>손절가</span><b>134,100</b></div>
+    <div><span>1차 매도가</span><b>163,900</b></div>
+    <div><span>데이터 기준일</span><b>2026-09-04</b></div>
+  </div>
+  <p class="reason">돌파 가격 재확인 구간 · MACD 히스토그램 개선 · ADX 25, +DI 우위</p>
+  <p class="caution">현재가가 권장 진입가 상단보다 2.1% 높아 강한 매수로 표시하지 않습니다. · 현재가가 EMA20보다 14.8% 높아 눌림목 진입으로 보기 어렵습니다.</p>
+  <a class="detail-button" href="details/180640.html">상세보기</a>
+</article>
+
+
+<article class="card ">
+  <div class="card-head"><div><strong>3. SK이노베이션</strong><span>096770</span></div><em>관심</em></div>
+  <div class="grid">
+    <div><span>상승기대</span><b>77점</b></div>
+    <div><span>진입 점수</span><b>73점</b></div>
+    <div><span>손익비</span><b>2.0</b></div>
+    <div><span>현재가</span><b>138,300</b></div>
+    <div><span>권장 진입가</span><b>136,600 ~ 140,400</b></div>
+    <div><span>손절가</span><b>125,300</b></div>
+    <div><span>1차 매도가</span><b>157,800</b></div>
+    <div><span>데이터 기준일</span><b>2026-09-04</b></div>
+  </div>
+  <p class="reason">돌파 가격 재확인 구간 · MACD 히스토그램 개선 · ADX 22, +DI 우위</p>
+  <p class="caution">현재가가 EMA20보다 10.8% 높아 눌림목 진입으로 보기 어렵습니다.</p>
+  <a class="detail-button" href="details/096770.html">상세보기</a>
+</article>
+
+
+<article class="card ">
+  <div class="card-head"><div><strong>4. 삼성에스디에스</strong><span>018260</span></div><em>관심</em></div>
+  <div class="grid">
+    <div><span>상승기대</span><b>72점</b></div>
+    <div><span>진입 점수</span><b>91점</b></div>
+    <div><span>손익비</span><b>2.0</b></div>
+    <div><span>현재가</span><b>238,000</b></div>
+    <div><span>권장 진입가</span><b>234,000 ~ 238,800</b></div>
+    <div><span>손절가</span><b>218,000</b></div>
+    <div><span>1차 매도가</span><b>268,100</b></div>
+    <div><span>데이터 기준일</span><b>2026-09-04</b></div>
+  </div>
+  <p class="reason">상승추세 안에서 EMA/VWAP 눌림 후 재상승 · MACD 히스토그램 개선 · 외국인 5일 순매수</p>
+  <p class="caution">시장 추세가 약해 신규 진입 점수 제한</p>
+  <a class="detail-button" href="details/018260.html">상세보기</a>
+</article>
+
+    </section>
+    <section class="panel"><div class="section-head"><h2>보충 관찰 후보</h2><span>조건 미충족 / 관찰용</span></div>
+<article class="card observe">
+  <div class="card-head"><div><strong>1. HD건설기계</strong><span>267270</span></div><em>눌림 확인</em></div>
+  <div class="grid">
+    <div><span>상승기대</span><b>55점</b></div>
+    <div><span>진입 점수</span><b>52점</b></div>
+    <div><span>손익비</span><b>2.0</b></div>
+    <div><span>현재가</span><b>140,000</b></div>
+    <div><span>권장 진입가</span><b>131,500 ~ 136,400</b></div>
+    <div><span>손절가</span><b>126,900</b></div>
+    <div><span>1차 매도가</span><b>163,500</b></div>
+    <div><span>데이터 기준일</span><b>2026-09-04</b></div>
+  </div>
+  <p class="reason">MACD 히스토그램 개선 · 거래량 21% 증가 · 외국인 5일 순매수</p>
+  <p class="caution">조건 미충족 / 관찰용입니다. 현재가가 권장 진입가 상단보다 3.6% 높아 강한 매수로 표시하지 않습니다.</p>
+  <a class="detail-button" href="details/267270.html">상세보기</a>
+</article>
+
+
+<article class="card observe">
+  <div class="card-head"><div><strong>2. JB금융지주</strong><span>175330</span></div><em>눌림 확인</em></div>
+  <div class="grid">
+    <div><span>상승기대</span><b>52점</b></div>
+    <div><span>진입 점수</span><b>58점</b></div>
+    <div><span>손익비</span><b>2.0</b></div>
+    <div><span>현재가</span><b>31,000</b></div>
+    <div><span>권장 진입가</span><b>29,900 ~ 30,400</b></div>
+    <div><span>손절가</span><b>28,750</b></div>
+    <div><span>1차 매도가</span><b>34,400</b></div>
+    <div><span>데이터 기준일</span><b>2026-09-04</b></div>
+  </div>
+  <p class="reason">MACD 히스토그램 개선 · ADX 21, +DI 우위 · 거래량 124% 증가</p>
+  <p class="caution">조건 미충족 / 관찰용입니다. 현재가가 권장 진입가 상단보다 2.0% 높아 강한 매수로 표시하지 않습니다. · 현재가가 EMA20보다 8.0% 높아 눌림목 진입으로 보기 어렵습니다.</p>
+  <a class="detail-button" href="details/175330.html">상세보기</a>
+</article>
+
+
+<article class="card observe">
+  <div class="card-head"><div><strong>3. 카카오페이</strong><span>377300</span></div><em>눌림 확인</em></div>
+  <div class="grid">
+    <div><span>상승기대</span><b>50점</b></div>
+    <div><span>진입 점수</span><b>65점</b></div>
+    <div><span>손익비</span><b>2.0</b></div>
+    <div><span>현재가</span><b>47,300</b></div>
+    <div><span>권장 진입가</span><b>45,350 ~ 46,350</b></div>
+    <div><span>손절가</span><b>43,100</b></div>
+    <div><span>1차 매도가</span><b>53,600</b></div>
+    <div><span>데이터 기준일</span><b>2026-09-04</b></div>
+  </div>
+  <p class="reason">MACD 히스토그램 개선 · ADX 20, +DI 우위 · 거래량 33% 증가</p>
+  <p class="caution">조건 미충족 / 관찰용입니다. 현재가가 권장 진입가 상단보다 2.3% 높아 강한 매수로 표시하지 않습니다.</p>
+  <a class="detail-button" href="details/377300.html">상세보기</a>
+</article>
+
+
+<article class="card observe">
+  <div class="card-head"><div><strong>4. 삼양식품</strong><span>003230</span></div><em>눌림 확인</em></div>
+  <div class="grid">
+    <div><span>상승기대</span><b>46점</b></div>
+    <div><span>진입 점수</span><b>76점</b></div>
+    <div><span>손익비</span><b>2.0</b></div>
+    <div><span>현재가</span><b>1,417,000</b></div>
+    <div><span>권장 진입가</span><b>1,372,800 ~ 1,408,200</b></div>
+    <div><span>손절가</span><b>1,306,400</b></div>
+    <div><span>1차 매도가</span><b>1,588,300</b></div>
+    <div><span>데이터 기준일</span><b>2026-09-04</b></div>
+  </div>
+  <p class="reason">ADX 39, +DI 우위 · 외국인 5일 순매수</p>
+  <p class="caution">조건 미충족 / 관찰용입니다. 현재가가 권장 진입가 상단보다 1.1% 높아 강한 매수로 표시하지 않습니다.</p>
+  <a class="detail-button" href="details/003230.html">상세보기</a>
+</article>
+
+
+<article class="card observe">
+  <div class="card-head"><div><strong>5. 한국콜마</strong><span>161890</span></div><em>눌림 확인</em></div>
+  <div class="grid">
+    <div><span>상승기대</span><b>46점</b></div>
+    <div><span>진입 점수</span><b>58점</b></div>
+    <div><span>손익비</span><b>2.0</b></div>
+    <div><span>현재가</span><b>145,800</b></div>
+    <div><span>권장 진입가</span><b>137,300 ~ 141,800</b></div>
+    <div><span>손절가</span><b>131,700</b></div>
+    <div><span>1차 매도가</span><b>171,300</b></div>
+    <div><span>데이터 기준일</span><b>2026-09-04</b></div>
+  </div>
+  <p class="reason">ADX 39, +DI 우위 · 외국인 5일 순매수</p>
+  <p class="caution">조건 미충족 / 관찰용입니다. 현재가가 권장 진입가 상단보다 3.5% 높아 강한 매수로 표시하지 않습니다.</p>
+  <a class="detail-button" href="details/161890.html">상세보기</a>
+</article>
+
+
+<article class="card observe">
+  <div class="card-head"><div><strong>6. DB손해보험</strong><span>005830</span></div><em>눌림 확인</em></div>
+  <div class="grid">
+    <div><span>상승기대</span><b>44점</b></div>
+    <div><span>진입 점수</span><b>70점</b></div>
+    <div><span>손익비</span><b>2.0</b></div>
+    <div><span>현재가</span><b>195,700</b></div>
+    <div><span>권장 진입가</span><b>190,800 ~ 194,500</b></div>
+    <div><span>손절가</span><b>180,200</b></div>
+    <div><span>1차 매도가</span><b>218,900</b></div>
+    <div><span>데이터 기준일</span><b>2026-09-04</b></div>
+  </div>
+  <p class="reason">ADX 34, +DI 우위 · 기관 5일 순매수</p>
+  <p class="caution">조건 미충족 / 관찰용입니다. 현재가가 권장 진입가 상단보다 0.8% 높아 강한 매수로 표시하지 않습니다.</p>
+  <a class="detail-button" href="details/005830.html">상세보기</a>
+</article>
+</section>
+    <footer>데이터 기준: 인터넷 공개 현재가/일봉 데이터 기준 · 최신성 기준: 10분 자동 수집 / 15분 주의 / 30분 오래됨 · 민감 키와 계좌 정보는 정적 페이지에 포함하지 않습니다.</footer>
+  </main>
+  <script type="application/json" id="latest-json">{&quot;schema_version&quot;: &quot;static-dashboard-v1&quot;, &quot;generated_at&quot;: &quot;2026-09-07T04:07:47.924438+09:00&quot;, &quot;generated_at_kst&quot;: &quot;2026-09-07 04:07 KST&quot;, &quot;ranking_generated_at&quot;: &quot;2026-09-07T04:07:47.924438+09:00&quot;, &quot;ranking_generated_at_kst&quot;: &quot;2026-09-07 04:07 KST&quot;, &quot;page_checked_at&quot;: &quot;2026-09-07T04:07:47.924438+09:00&quot;, &quot;page_checked_at_kst&quot;: &quot;2026-09-07 04:07 KST&quot;, &quot;market_session&quot;: &quot;closed&quot;, &quot;market_session_label&quot;: &quot;장외&quot;, &quot;heartbeat_mode&quot;: false, &quot;collection_status&quot;: &quot;success&quot;, &quot;failure_message&quot;: &quot;&quot;, &quot;realtime&quot;: {&quot;provider&quot;: &quot;disabled&quot;, &quot;requested&quot;: false, &quot;configured&quot;: false, &quot;attempted&quot;: false, &quot;enabled&quot;: false, &quot;auth_success&quot;: false, &quot;quote_success_count&quot;: 0, &quot;quote_fail_count&quot;: 0, &quot;success_count&quot;: 0, &quot;fail_count&quot;: 0, &quot;skipped_reason&quot;: &quot;kis_disabled&quot;, &quot;last_success_at_kst&quot;: &quot;&quot;, &quot;error&quot;: &quot;&quot;, &quot;diagnostic_hint&quot;: &quot;&quot;}, &quot;internet_quote&quot;: {&quot;enabled&quot;: true, &quot;provider&quot;: &quot;naver_finance&quot;, &quot;attempted&quot;: true, &quot;success_count&quot;: 118, &quot;fail_count&quot;: 0, &quot;last_success_at_kst&quot;: &quot;2026-09-07 04:07 KST&quot;, &quot;freshness_label&quot;: &quot;인터넷 공개 현재가/일봉 기준&quot;, &quot;error&quot;: &quot;&quot;}, &quot;previous_result_used&quot;: false, &quot;market&quot;: &quot;KOSPI&quot;, &quot;settings&quot;: {&quot;pages&quot;: 3, &quot;strictness&quot;: &quot;보수적&quot;, &quot;count&quot;: 360, &quot;min_score&quot;: 70, &quot;include_watch&quot;: false, &quot;exclude_non_common&quot;: true, &quot;fill_observation_top10&quot;: true}, &quot;data_basis&quot;: {&quot;ranking_data&quot;: &quot;인터넷 공개 현재가/일봉 데이터 기준&quot;, &quot;data_basis_date&quot;: &quot;2026-09-04&quot;, &quot;last_collected_at&quot;: &quot;2026-09-07 04:07 KST&quot;, &quot;realtime&quot;: &quot;OFF&quot;, &quot;collection_method&quot;: &quot;GitHub Actions 자동 수집&quot;, &quot;scanned_count&quot;: 118, &quot;result_count&quot;: 118, &quot;filtered_count&quot;: 4, &quot;display_count&quot;: 4}, &quot;freshness&quot;: {&quot;generated_at&quot;: &quot;2026-09-07T04:07:47.924438+09:00&quot;, &quot;generated_at_kst&quot;: &quot;2026-09-07 04:07 KST&quot;, &quot;refresh_interval_minutes&quot;: 10, &quot;stale_after_minutes&quot;: 15, &quot;very_stale_after_minutes&quot;: 30, &quot;stopped_after_minutes&quot;: 60, &quot;heartbeat_interval_minutes&quot;: 60, &quot;heartbeat_stale_after_minutes&quot;: 120, &quot;off_hours_stale_after_minutes&quot;: 90, &quot;off_hours_stopped_after_minutes&quot;: 180, &quot;off_hours_critical_after_minutes&quot;: 360}, &quot;market_state&quot;: {&quot;ok&quot;: false, &quot;score&quot;: 3, &quot;label&quot;: &quot;시장 약세&quot;, &quot;reason&quot;: &quot;지수 추세 약세&quot;}, &quot;macro_brief&quot;: {&quot;updated_at&quot;: &quot;2026-09-07T04:05+09:00&quot;, &quot;mode&quot;: &quot;close&quot;, &quot;indexes&quot;: {&quot;nasdaq&quot;: {&quot;label&quot;: &quot;NASDAQ&quot;, &quot;value&quot;: &quot;26,506.99&quot;, &quot;change&quot;: &quot;-0.29%&quot;, &quot;change_number&quot;: -0.29, &quot;status&quot;: &quot;available&quot;, &quot;market_time&quot;: 1788556559}, &quot;sp500&quot;: {&quot;label&quot;: &quot;S&amp;P500&quot;, &quot;value&quot;: &quot;7,718.60&quot;, &quot;change&quot;: &quot;-0.38%&quot;, &quot;change_number&quot;: -0.376, &quot;status&quot;: &quot;available&quot;, &quot;market_time&quot;: 1788553986}, &quot;sox&quot;: {&quot;label&quot;: &quot;SOX&quot;, &quot;value&quot;: &quot;11,735.26&quot;, &quot;change&quot;: &quot;+3.38%&quot;, &quot;change_number&quot;: 3.375, &quot;status&quot;: &quot;available&quot;, &quot;market_time&quot;: 1788556559}, &quot;vix&quot;: {&quot;label&quot;: &quot;VIX&quot;, &quot;value&quot;: &quot;14.53&quot;, &quot;change&quot;: &quot;+1.47%&quot;, &quot;change_number&quot;: 1.466, &quot;status&quot;: &quot;available&quot;, &quot;market_time&quot;: 1788552901}, &quot;usdkrw&quot;: {&quot;label&quot;: &quot;USD/KRW&quot;, &quot;value&quot;: &quot;1,345.99&quot;, &quot;change&quot;: &quot;-0.73%&quot;, &quot;change_number&quot;: -0.7258, &quot;status&quot;: &quot;available&quot;, &quot;market_time&quot;: 1788713581}, &quot;us10y&quot;: {&quot;label&quot;: &quot;미국 10년물&quot;, &quot;value&quot;: &quot;4.78%&quot;, &quot;change&quot;: &quot;+0.02%p&quot;, &quot;change_number&quot;: 0.022, &quot;status&quot;: &quot;available&quot;, &quot;market_time&quot;: 1788548394}, &quot;us2y&quot;: {&quot;label&quot;: &quot;미국 2년물&quot;, &quot;value&quot;: null, &quot;change&quot;: null, &quot;status&quot;: &quot;missing&quot;, &quot;error&quot;: &quot;404 Client Error: Not Found for url: https://query1.finance.yahoo.com/v8/finance/chart/%5EUST2Y?interval=5m&amp;range=5d&amp;includePrePost=true&quot;}, &quot;wti&quot;: {&quot;label&quot;: &quot;WTI&quot;, &quot;value&quot;: &quot;91.48&quot;, &quot;change&quot;: &quot;+0.20%&quot;, &quot;change_number&quot;: 0.197, &quot;status&quot;: &quot;available&quot;, &quot;market_time&quot;: 1788555598}, &quot;dxy&quot;: {&quot;label&quot;: &quot;DXY&quot;, &quot;value&quot;: &quot;99.16&quot;, &quot;change&quot;: &quot;-0.02%&quot;, &quot;change_number&quot;: -0.019, &quot;status&quot;: &quot;available&quot;, &quot;market_time&quot;: 1788555599}}, &quot;macro_judgment&quot;: &quot;위험선호 우세&quot;, &quot;market_judgment&quot;: &quot;위험선호 우세&quot;, &quot;market_summary&quot;: &quot;나스닥·반도체 또는 변동성 흐름이 상대적으로 우호적입니다. 다만 금리·환율 부담은 별도 확인이 필요합니다.&quot;, &quot;korea_takeaway&quot;: &quot;반도체/성장주 우호 가능성, 개별 종목의 가격 위치와 손익비는 별도 확인&quot;, &quot;issues&quot;: [{&quot;category&quot;: &quot;rates_fx&quot;, &quot;title&quot;: &quot;국채금리/달러/환율&quot;, &quot;summary&quot;: &quot;미국 금리와 달러 흐름은 한국 성장주와 외국인 수급 부담에 직접 연결됩니다.&quot;, &quot;evidence_title&quot;: &quot;He’s Swapped One Rental for Another Three Times Since 1994 and Never Paid a Dollar of Capital-Gains Tax. If He Still Owns the Last One the Day He Dies, Nobody Ever Will&quot;, &quot;impact&quot;: &quot;risk_on&quot;, &quot;importance&quot;: 88, &quot;affected_assets&quot;: [&quot;DXY&quot;, &quot;USD/KRW&quot;, &quot;US yields&quot;], &quot;affected_korea_sectors&quot;: [&quot;반도체&quot;, &quot;자동차&quot;, &quot;외국인 수급&quot;], &quot;source_count&quot;: 14, &quot;freshness&quot;: &quot;latest&quot;, &quot;korea_impact&quot;: &quot;환율 부담 시 외국인 수급과 고밸류 성장주 주의&quot;}, {&quot;category&quot;: &quot;indexes_volatility&quot;, &quot;title&quot;: &quot;미국 지수/VIX&quot;, &quot;summary&quot;: &quot;미국 지수와 VIX 흐름은 당일 위험선호·위험회피 판단의 기준입니다.&quot;, &quot;evidence_title&quot;: &quot;Cathie Wood&#x27;s Ark Has Delivered Just a 13.8% Annualized Return Since 2014, Roughly Matching the S&amp;P 500. Should You Trust Her Bold Predictions for 2030?&quot;, &quot;impact&quot;: &quot;risk_mixed&quot;, &quot;importance&quot;: 86, &quot;affected_assets&quot;: [&quot;NASDAQ&quot;, &quot;S&amp;P500&quot;, &quot;VIX&quot;], &quot;affected_korea_sectors&quot;: [&quot;성장주&quot;, &quot;방어주&quot;], &quot;source_count&quot;: 14, &quot;freshness&quot;: &quot;latest&quot;, &quot;korea_impact&quot;: &quot;지수 방향보다 개별 종목 가격 위치와 손익비를 별도 확인&quot;}, {&quot;category&quot;: &quot;semis_ai_bigtech&quot;, &quot;title&quot;: &quot;반도체/AI/빅테크&quot;, &quot;summary&quot;: &quot;AI·반도체·빅테크 흐름은 국내 반도체와 성장주 심리에 영향을 줄 수 있습니다.&quot;, &quot;evidence_title&quot;: &quot;The &#x27;Waffle House Index&#x27; is real, and Apple is filming it&quot;, &quot;impact&quot;: &quot;risk_on&quot;, &quot;importance&quot;: 84, &quot;affected_assets&quot;: [&quot;SOX&quot;, &quot;NASDAQ&quot;, &quot;big tech&quot;], &quot;affected_korea_sectors&quot;: [&quot;반도체&quot;, &quot;AI&quot;, &quot;인터넷&quot;], &quot;source_count&quot;: 13, &quot;freshness&quot;: &quot;latest&quot;, &quot;korea_impact&quot;: &quot;반도체 우호 가능성, 급등주는 추격보다 진입 조건 분리 확인&quot;}, {&quot;category&quot;: &quot;oil_commodities&quot;, &quot;title&quot;: &quot;유가/원자재&quot;, &quot;summary&quot;: &quot;유가와 원자재 변동은 물가 기대와 운송·화학·에너지 업종에 영향을 줍니다.&quot;, &quot;evidence_title&quot;: &quot;oil prices commodity inflation&quot;, &quot;impact&quot;: &quot;risk_mixed&quot;, &quot;importance&quot;: 78, &quot;affected_assets&quot;: [&quot;WTI&quot;, &quot;inflation&quot;, &quot;energy&quot;], &quot;affected_korea_sectors&quot;: [&quot;에너지&quot;, &quot;화학&quot;, &quot;운송&quot;], &quot;source_count&quot;: 1, &quot;freshness&quot;: &quot;latest&quot;, &quot;korea_impact&quot;: &quot;에너지·방산·운송·화학 업종 차별화 가능&quot;}, {&quot;title&quot;: &quot;연준/FOMC&quot;, &quot;summary&quot;: &quot;관련 뉴스 확인 필요&quot;, &quot;korea_impact&quot;: &quot;금리 경로 확인 전까지 성장주와 고밸류 업종 추격은 분리 대응이 필요합니다.&quot;, &quot;source_count&quot;: 0, &quot;evidence_title&quot;: &quot;확인 필요&quot;}, {&quot;title&quot;: &quot;물가/CPI/PCE&quot;, &quot;summary&quot;: &quot;관련 뉴스 확인 필요&quot;, &quot;korea_impact&quot;: &quot;물가 지표는 금리 기대와 성장주 밸류 부담을 흔들 수 있습니다.&quot;, &quot;source_count&quot;: 0, &quot;evidence_title&quot;: &quot;확인 필요&quot;}, {&quot;title&quot;: &quot;고용/임금&quot;, &quot;summary&quot;: &quot;관련 뉴스 확인 필요&quot;, &quot;korea_impact&quot;: &quot;고용 둔화와 임금 흐름은 경기민감주와 위험자산 선호에 영향을 줄 수 있습니다.&quot;, &quot;source_count&quot;: 0, &quot;evidence_title&quot;: &quot;확인 필요&quot;}, {&quot;title&quot;: &quot;유가/지정학&quot;, &quot;summary&quot;: &quot;관련 뉴스 확인 필요&quot;, &quot;korea_impact&quot;: &quot;유가와 지정학 리스크는 물가 부담과 위험회피 심리를 키울 수 있습니다.&quot;, &quot;source_count&quot;: 0, &quot;evidence_title&quot;: &quot;확인 필요&quot;}], &quot;expanded_issues&quot;: [{&quot;category&quot;: &quot;rates_fx&quot;, &quot;title&quot;: &quot;국채금리/달러/환율&quot;, &quot;summary&quot;: &quot;미국 금리와 달러 흐름은 한국 성장주와 외국인 수급 부담에 직접 연결됩니다.&quot;, &quot;evidence_title&quot;: &quot;He’s Swapped One Rental for Another Three Times Since 1994 and Never Paid a Dollar of Capital-Gains Tax. If He Still Owns the Last One the Day He Dies, Nobody Ever Will&quot;, &quot;impact&quot;: &quot;risk_on&quot;, &quot;importance&quot;: 88, &quot;affected_assets&quot;: [&quot;DXY&quot;, &quot;USD/KRW&quot;, &quot;US yields&quot;], &quot;affected_korea_sectors&quot;: [&quot;반도체&quot;, &quot;자동차&quot;, &quot;외국인 수급&quot;], &quot;source_count&quot;: 14, &quot;freshness&quot;: &quot;latest&quot;, &quot;korea_impact&quot;: &quot;환율 부담 시 외국인 수급과 고밸류 성장주 주의&quot;}, {&quot;category&quot;: &quot;indexes_volatility&quot;, &quot;title&quot;: &quot;미국 지수/VIX&quot;, &quot;summary&quot;: &quot;미국 지수와 VIX 흐름은 당일 위험선호·위험회피 판단의 기준입니다.&quot;, &quot;evidence_title&quot;: &quot;Cathie Wood&#x27;s Ark Has Delivered Just a 13.8% Annualized Return Since 2014, Roughly Matching the S&amp;P 500. Should You Trust Her Bold Predictions for 2030?&quot;, &quot;impact&quot;: &quot;risk_mixed&quot;, &quot;importance&quot;: 86, &quot;affected_assets&quot;: [&quot;NASDAQ&quot;, &quot;S&amp;P500&quot;, &quot;VIX&quot;], &quot;affected_korea_sectors&quot;: [&quot;성장주&quot;, &quot;방어주&quot;], &quot;source_count&quot;: 14, &quot;freshness&quot;: &quot;latest&quot;, &quot;korea_impact&quot;: &quot;지수 방향보다 개별 종목 가격 위치와 손익비를 별도 확인&quot;}, {&quot;category&quot;: &quot;semis_ai_bigtech&quot;, &quot;title&quot;: &quot;반도체/AI/빅테크&quot;, &quot;summary&quot;: &quot;AI·반도체·빅테크 흐름은 국내 반도체와 성장주 심리에 영향을 줄 수 있습니다.&quot;, &quot;evidence_title&quot;: &quot;The &#x27;Waffle House Index&#x27; is real, and Apple is filming it&quot;, &quot;impact&quot;: &quot;risk_on&quot;, &quot;importance&quot;: 84, &quot;affected_assets&quot;: [&quot;SOX&quot;, &quot;NASDAQ&quot;, &quot;big tech&quot;], &quot;affected_korea_sectors&quot;: [&quot;반도체&quot;, &quot;AI&quot;, &quot;인터넷&quot;], &quot;source_count&quot;: 13, &quot;freshness&quot;: &quot;latest&quot;, &quot;korea_impact&quot;: &quot;반도체 우호 가능성, 급등주는 추격보다 진입 조건 분리 확인&quot;}, {&quot;category&quot;: &quot;oil_commodities&quot;, &quot;title&quot;: &quot;유가/원자재&quot;, &quot;summary&quot;: &quot;유가와 원자재 변동은 물가 기대와 운송·화학·에너지 업종에 영향을 줍니다.&quot;, &quot;evidence_title&quot;: &quot;oil prices commodity inflation&quot;, &quot;impact&quot;: &quot;risk_mixed&quot;, &quot;importance&quot;: 78, &quot;affected_assets&quot;: [&quot;WTI&quot;, &quot;inflation&quot;, &quot;energy&quot;], &quot;affected_korea_sectors&quot;: [&quot;에너지&quot;, &quot;화학&quot;, &quot;운송&quot;], &quot;source_count&quot;: 1, &quot;freshness&quot;: &quot;latest&quot;, &quot;korea_impact&quot;: &quot;에너지·방산·운송·화학 업종 차별화 가능&quot;}, {&quot;title&quot;: &quot;연준/FOMC&quot;, &quot;summary&quot;: &quot;관련 뉴스 확인 필요&quot;, &quot;korea_impact&quot;: &quot;금리 경로 확인 전까지 성장주와 고밸류 업종 추격은 분리 대응이 필요합니다.&quot;, &quot;source_count&quot;: 0, &quot;evidence_title&quot;: &quot;확인 필요&quot;}, {&quot;title&quot;: &quot;물가/CPI/PCE&quot;, &quot;summary&quot;: &quot;관련 뉴스 확인 필요&quot;, &quot;korea_impact&quot;: &quot;물가 지표는 금리 기대와 성장주 밸류 부담을 흔들 수 있습니다.&quot;, &quot;source_count&quot;: 0, &quot;evidence_title&quot;: &quot;확인 필요&quot;}, {&quot;title&quot;: &quot;고용/임금&quot;, &quot;summary&quot;: &quot;관련 뉴스 확인 필요&quot;, &quot;korea_impact&quot;: &quot;고용 둔화와 임금 흐름은 경기민감주와 위험자산 선호에 영향을 줄 수 있습니다.&quot;, &quot;source_count&quot;: 0, &quot;evidence_title&quot;: &quot;확인 필요&quot;}, {&quot;title&quot;: &quot;유가/지정학&quot;, &quot;summary&quot;: &quot;관련 뉴스 확인 필요&quot;, &quot;korea_impact&quot;: &quot;유가와 지정학 리스크는 물가 부담과 위험회피 심리를 키울 수 있습니다.&quot;, &quot;source_count&quot;: 0, &quot;evidence_title&quot;: &quot;확인 필요&quot;}, {&quot;title&quot;: &quot;버핏/기관 수급&quot;, &quot;summary&quot;: &quot;관련 뉴스 확인 필요&quot;, &quot;korea_impact&quot;: &quot;대형 기관과 장기투자자 흐름은 글로벌 위험 선호를 해석하는 참고값입니다.&quot;, &quot;source_count&quot;: 0, &quot;evidence_title&quot;: &quot;확인 필요&quot;}], &quot;news_items&quot;: [&quot;미국 금리와 달러 흐름은 한국 성장주와 외국인 수급 부담에 직접 연결됩니다.&quot;, &quot;미국 지수와 VIX 흐름은 당일 위험선호·위험회피 판단의 기준입니다.&quot;, &quot;AI·반도체·빅테크 흐름은 국내 반도체와 성장주 심리에 영향을 줄 수 있습니다.&quot;, &quot;유가와 원자재 변동은 물가 기대와 운송·화학·에너지 업종에 영향을 줍니다.&quot;], &quot;data_status&quot;: &quot;available&quot;, &quot;news_provider&quot;: &quot;gdelt+rss&quot;, &quot;news_fallback_used&quot;: false, &quot;news_source_count&quot;: 12, &quot;news_last_checked_at_kst&quot;: &quot;2026-09-07 04:05 KST&quot;}, &quot;us_breaking_news&quot;: {&quot;provider&quot;: &quot;gdelt+rss&quot;, &quot;enabled&quot;: true, &quot;attempted&quot;: true, &quot;success_count&quot;: 12, &quot;hotpick_count&quot;: 1, &quot;fallback_used&quot;: false, &quot;fallback_reason&quot;: &quot;&quot;, &quot;last_checked_at_kst&quot;: &quot;2026-09-07 04:05 KST&quot;, &quot;last_success_at_kst&quot;: &quot;2026-09-07 04:05 KST&quot;, &quot;provider_errors&quot;: {}, &quot;fetch_error&quot;: &quot;&quot;, &quot;items&quot;: [{&quot;title&quot;: &quot;Iran warns of tougher response : Oil , gold and stocks to watch over the holiday weekend&quot;, &quot;url&quot;: &quot;https://investinglive.com/news/iran-warns-of-tougher-response-oil-gold-and-stocks-to-watch-over-the-holiday-weekend/&quot;, &quot;source&quot;: &quot;investinglive.com&quot;, &quot;provider&quot;: &quot;gdelt&quot;, &quot;published_at&quot;: &quot;2026-09-06T16:00:00+00:00&quot;, &quot;published_at_kst&quot;: &quot;2026-09-07 01:00 KST&quot;, &quot;category&quot;: &quot;geopolitics_oil&quot;, &quot;category_label&quot;: &quot;지정학/유가&quot;, &quot;severity&quot;: &quot;critical&quot;, &quot;is_hotpick&quot;: true, &quot;importance_score&quot;: 100, &quot;market_impact_score&quot;: 100, &quot;korea_impact&quot;: &quot;중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.&quot;, &quot;tickers&quot;: []}, {&quot;title&quot;: &quot;Investment Analyst Downgrades for September 6th ( AIIO , AON , ARI , AUGO , BMEA , CLS , HUYA , LI , LION , LWLG )&quot;, &quot;url&quot;: &quot;https://www.dailypolitical.com/2026/09/06/investment-analysts-downgrades-for-september-6th-aiio-aon-ari-augo-bmea-cls-huya-li-lion-lwlg.html&quot;, &quot;source&quot;: &quot;dailypolitical.com&quot;, &quot;provider&quot;: &quot;gdelt&quot;, &quot;published_at&quot;: &quot;2026-09-06T18:15:00+00:00&quot;, &quot;published_at_kst&quot;: &quot;2026-09-07 03:15 KST&quot;, &quot;category&quot;: &quot;indexes_volatility&quot;, &quot;category_label&quot;: &quot;지수/변동성&quot;, &quot;severity&quot;: &quot;warning&quot;, &quot;is_hotpick&quot;: false, &quot;importance_score&quot;: 100, &quot;market_impact_score&quot;: 100, &quot;korea_impact&quot;: &quot;미국 지수와 VIX 흐름은 당일 위험선호·위험회피 판단의 참고값입니다.&quot;, &quot;tickers&quot;: []}, {&quot;title&quot;: &quot;Stock Market Week Ahead : Week Of The Big Bond Scheme&quot;, &quot;url&quot;: &quot;https://www.investors.com/research/investing-action-plan/stock-market-week-ahead-week-of-the-big-bond-scheme/&quot;, &quot;source&quot;: &quot;investors.com&quot;, &quot;provider&quot;: &quot;gdelt&quot;, &quot;published_at&quot;: &quot;2026-09-06T16:30:00+00:00&quot;, &quot;published_at_kst&quot;: &quot;2026-09-07 01:30 KST&quot;, &quot;category&quot;: &quot;rates_fx&quot;, &quot;category_label&quot;: &quot;금리/달러&quot;, &quot;severity&quot;: &quot;warning&quot;, &quot;is_hotpick&quot;: false, &quot;importance_score&quot;: 100, &quot;market_impact_score&quot;: 100, &quot;korea_impact&quot;: &quot;미국 금리·달러 흐름은 한국 성장주와 외국인 수급 부담을 흔들 수 있습니다.&quot;, &quot;tickers&quot;: []}, {&quot;title&quot;: &quot;A Fed Rate Hike May Be in the Cards on Sept . 16 , and 36 Years of History Says the Stock Market Wont Be Happy ( at Least Initially )&quot;, &quot;url&quot;: &quot;https://www.aol.com/articles/fed-rate-hike-may-cards-152601000.html&quot;, &quot;source&quot;: &quot;aol.com&quot;, &quot;provider&quot;: &quot;gdelt&quot;, &quot;published_at&quot;: &quot;2026-09-06T16:00:00+00:00&quot;, &quot;published_at_kst&quot;: &quot;2026-09-07 01:00 KST&quot;, &quot;category&quot;: &quot;rates_fx&quot;, &quot;category_label&quot;: &quot;금리/달러&quot;, &quot;severity&quot;: &quot;warning&quot;, &quot;is_hotpick&quot;: false, &quot;importance_score&quot;: 100, &quot;market_impact_score&quot;: 100, &quot;korea_impact&quot;: &quot;미국 금리·달러 흐름은 한국 성장주와 외국인 수급 부담을 흔들 수 있습니다.&quot;, &quot;tickers&quot;: []}, {&quot;title&quot;: &quot;Stock Market Investors Just Got a Warning From the Federal Reserve . History Says This Will Happen Next .&quot;, &quot;url&quot;: &quot;https://www.fool.com/investing/2026/09/06/stock-market-investors-warning-federal-reserve/&quot;, &quot;source&quot;: &quot;fool.com&quot;, &quot;provider&quot;: &quot;gdelt&quot;, &quot;published_at&quot;: &quot;2026-09-06T09:45:00+00:00&quot;, &quot;published_at_kst&quot;: &quot;2026-09-06 18:45 KST&quot;, &quot;category&quot;: &quot;rates_fx&quot;, &quot;category_label&quot;: &quot;금리/달러&quot;, &quot;severity&quot;: &quot;warning&quot;, &quot;is_hotpick&quot;: false, &quot;importance_score&quot;: 100, &quot;market_impact_score&quot;: 100, &quot;korea_impact&quot;: &quot;미국 금리·달러 흐름은 한국 성장주와 외국인 수급 부담을 흔들 수 있습니다.&quot;, &quot;tickers&quot;: []}, {&quot;title&quot;: &quot;August Job Gains Blew Past Estimates . Here What It Means for the Fed .&quot;, &quot;url&quot;: &quot;https://finance.yahoo.com/economy/policy/articles/august-job-gains-blew-past-030500568.html&quot;, &quot;source&quot;: &quot;finance.yahoo.com&quot;, &quot;provider&quot;: &quot;gdelt&quot;, &quot;published_at&quot;: &quot;2026-09-06T03:45:00+00:00&quot;, &quot;published_at_kst&quot;: &quot;2026-09-06 12:45 KST&quot;, &quot;category&quot;: &quot;rates_fx&quot;, &quot;category_label&quot;: &quot;금리/달러&quot;, &quot;severity&quot;: &quot;warning&quot;, &quot;is_hotpick&quot;: false, &quot;importance_score&quot;: 100, &quot;market_impact_score&quot;: 100, &quot;korea_impact&quot;: &quot;미국 금리·달러 흐름은 한국 성장주와 외국인 수급 부담을 흔들 수 있습니다.&quot;, &quot;tickers&quot;: []}, {&quot;title&quot;: &quot;Wall Street ends lower as solid jobs data fuels hawkish Fed bets&quot;, &quot;url&quot;: &quot;https://www.mvariety.com/business/business_news/wall-street-ends-lower-as-solid-jobs-data-fuels-hawkish-fed-bets/article_da2d563e-a907-4955-be76-8d0e71e9452a.html&quot;, &quot;source&quot;: &quot;mvariety.com&quot;, &quot;provider&quot;: &quot;gdelt&quot;, &quot;published_at&quot;: &quot;2026-09-05T19:30:00+00:00&quot;, &quot;published_at_kst&quot;: &quot;2026-09-06 04:30 KST&quot;, &quot;category&quot;: &quot;rates_fx&quot;, &quot;category_label&quot;: &quot;금리/달러&quot;, &quot;severity&quot;: &quot;warning&quot;, &quot;is_hotpick&quot;: false, &quot;importance_score&quot;: 100, &quot;market_impact_score&quot;: 100, &quot;korea_impact&quot;: &quot;미국 금리·달러 흐름은 한국 성장주와 외국인 수급 부담을 흔들 수 있습니다.&quot;, &quot;tickers&quot;: []}, {&quot;title&quot;: &quot;Polymarket Launches Crypto Perpetual Futures With Up to 20x Leverage&quot;, &quot;url&quot;: &quot;https://finance.yahoo.com/markets/crypto/articles/polymarket-launches-crypto-perpetual-futures-203103778.html&quot;, &quot;source&quot;: &quot;finance.yahoo.com&quot;, &quot;provider&quot;: &quot;gdelt&quot;, &quot;published_at&quot;: &quot;2026-09-06T03:15:00+00:00&quot;, &quot;published_at_kst&quot;: &quot;2026-09-06 12:15 KST&quot;, &quot;category&quot;: &quot;indexes_volatility&quot;, &quot;category_label&quot;: &quot;지수/변동성&quot;, &quot;severity&quot;: &quot;warning&quot;, &quot;is_hotpick&quot;: false, &quot;importance_score&quot;: 88, &quot;market_impact_score&quot;: 88, &quot;korea_impact&quot;: &quot;미국 지수와 VIX 흐름은 당일 위험선호·위험회피 판단의 참고값입니다.&quot;, &quot;tickers&quot;: []}, {&quot;title&quot;: &quot;How Asian markets , crude will impact Sensex , Nifty tomorrow : What GIFT Nifty , Nikkei , Kospi , Taiwan signal for India&quot;, &quot;url&quot;: &quot;https://www.livemint.com/market/stock-market-news/how-asian-markets-crude-will-impact-sensex-nifty-tomorrow-what-gift-nifty-nikkei-kospi-taiwan-signal-for-india-11788673692892.html&quot;, &quot;source&quot;: &quot;livemint.com&quot;, &quot;provider&quot;: &quot;gdelt&quot;, &quot;published_at&quot;: &quot;2026-09-06T08:30:00+00:00&quot;, &quot;published_at_kst&quot;: &quot;2026-09-06 17:30 KST&quot;, &quot;category&quot;: &quot;energy_geopolitics&quot;, &quot;category_label&quot;: &quot;유가/지정학&quot;, &quot;severity&quot;: &quot;normal&quot;, &quot;is_hotpick&quot;: false, &quot;importance_score&quot;: 82, &quot;market_impact_score&quot;: 82, &quot;korea_impact&quot;: &quot;유가·지정학 뉴스는 물가 부담, 방산·에너지·운송 업종 변동성에 연결됩니다.&quot;, &quot;tickers&quot;: []}, {&quot;title&quot;: &quot;US Market Outlook : Support holds well - The HinduBusinessLine&quot;, &quot;url&quot;: &quot;https://www.thehindubusinessline.com/portfolio/technical-analysis/us-market-outlook-support-holds-well/article71430926.ece&quot;, &quot;source&quot;: &quot;thehindubusinessline.com&quot;, &quot;provider&quot;: &quot;gdelt&quot;, &quot;published_at&quot;: &quot;2026-09-05T19:30:00+00:00&quot;, &quot;published_at_kst&quot;: &quot;2026-09-06 04:30 KST&quot;, &quot;category&quot;: &quot;earnings&quot;, &quot;category_label&quot;: &quot;실적/가이던스&quot;, &quot;severity&quot;: &quot;normal&quot;, &quot;is_hotpick&quot;: false, &quot;importance_score&quot;: 76, &quot;market_impact_score&quot;: 76, &quot;korea_impact&quot;: &quot;미국 대형주 실적·가이던스는 국내 성장주와 관련 업종 심리에 영향을 줄 수 있습니다.&quot;, &quot;tickers&quot;: []}, {&quot;title&quot;: &quot;Investment Analyst Upgrades for September 6th ( ADSK , AMIX , ARGX , ASYS , BBAR , BE , BJDX , CPAY , DXCM , EFSI )&quot;, &quot;url&quot;: &quot;https://www.themarketsdaily.com/2026/09/06/investment-analysts-upgrades-for-september-6th-adsk-amix-argx-asys-bbar-be-bjdx-cpay-dxcm-efsi.html&quot;, &quot;source&quot;: &quot;themarketsdaily.com&quot;, &quot;provider&quot;: &quot;gdelt&quot;, &quot;published_at&quot;: &quot;2026-09-06T18:15:00+00:00&quot;, &quot;published_at_kst&quot;: &quot;2026-09-07 03:15 KST&quot;, &quot;category&quot;: &quot;general&quot;, &quot;category_label&quot;: &quot;기타&quot;, &quot;severity&quot;: &quot;normal&quot;, &quot;is_hotpick&quot;: false, &quot;importance_score&quot;: 57, &quot;market_impact_score&quot;: 57, &quot;korea_impact&quot;: &quot;미국장 일반 뉴스로, 개별 종목 진입 조건을 대체하지 않습니다.&quot;, &quot;tickers&quot;: []}, {&quot;title&quot;: &quot;Where Will SCHD Stock Be in 5 Years ? | The Motley Fool&quot;, &quot;url&quot;: &quot;https://www.fool.com/investing/2026/09/06/where-will-schd-stock-be-in-5-years/?source=iedfolrf0000001&quot;, &quot;source&quot;: &quot;fool.com&quot;, &quot;provider&quot;: &quot;gdelt&quot;, &quot;published_at&quot;: &quot;2026-09-06T17:45:00+00:00&quot;, &quot;published_at_kst&quot;: &quot;2026-09-07 02:45 KST&quot;, &quot;category&quot;: &quot;general&quot;, &quot;category_label&quot;: &quot;기타&quot;, &quot;severity&quot;: &quot;normal&quot;, &quot;is_hotpick&quot;: false, &quot;importance_score&quot;: 57, &quot;market_impact_score&quot;: 57, &quot;korea_impact&quot;: &quot;미국장 일반 뉴스로, 개별 종목 진입 조건을 대체하지 않습니다.&quot;, &quot;tickers&quot;: []}], &quot;fallback_message&quot;: &quot;&quot;}, &quot;rankings&quot;: {&quot;qualified&quot;: [{&quot;code&quot;: &quot;003490&quot;, &quot;name&quot;: &quot;대한항공&quot;, &quot;market&quot;: &quot;KOSPI&quot;, &quot;status&quot;: &quot;눌림 대기&quot;, &quot;final_action&quot;: &quot;눌림 확인&quot;, &quot;signal_type&quot;: &quot;박스권 돌파&quot;, &quot;direction_score&quot;: 78, &quot;entry_score&quot;: 70, &quot;rr_ratio&quot;: 2.0, &quot;entry_range&quot;: &quot;29,550 ~ 30,050&quot;, &quot;stop_loss&quot;: &quot;28,550&quot;, &quot;target_1&quot;: &quot;32,700&quot;, &quot;current_price&quot;: &quot;30,200&quot;, &quot;data_basis_date&quot;: &quot;2026-09-04&quot;, &quot;detail_path&quot;: &quot;details/003490.html&quot;, &quot;badges&quot;: [&quot;외국인 +&quot;, &quot;기관 +&quot;, &quot;거래량 급증&quot;], &quot;reasons&quot;: [&quot;20일 고점 돌파와 거래량 증가&quot;, &quot;돌파 가격 재확인 구간&quot;, &quot;MACD 히스토그램 개선&quot;], &quot;cautions&quot;: [&quot;현재가가 권장 진입가 상단보다 0.8% 높아 강한 매수로 표시하지 않습니다.&quot;, &quot;현재가가 EMA20보다 9.3% 높아 눌림목 진입으로 보기 어렵습니다.&quot;], &quot;observation&quot;: false}, {&quot;code&quot;: &quot;180640&quot;, &quot;name&quot;: &quot;한진칼&quot;, &quot;market&quot;: &quot;KOSPI&quot;, &quot;status&quot;: &quot;눌림 대기&quot;, &quot;final_action&quot;: &quot;눌림 확인&quot;, &quot;signal_type&quot;: &quot;돌파 후 재확인&quot;, &quot;direction_score&quot;: 72, &quot;entry_score&quot;: 65, &quot;rr_ratio&quot;: 2.0, &quot;entry_range&quot;: &quot;142,000 ~ 145,400&quot;, &quot;stop_loss&quot;: &quot;134,100&quot;, &quot;target_1&quot;: &quot;163,900&quot;, &quot;current_price&quot;: &quot;146,000&quot;, &quot;data_basis_date&quot;: &quot;2026-09-04&quot;, &quot;detail_path&quot;: &quot;details/180640.html&quot;, &quot;badges&quot;: [&quot;기관 +&quot;], &quot;reasons&quot;: [&quot;돌파 가격 재확인 구간&quot;, &quot;MACD 히스토그램 개선&quot;, &quot;ADX 25, +DI 우위&quot;], &quot;cautions&quot;: [&quot;현재가가 권장 진입가 상단보다 2.1% 높아 강한 매수로 표시하지 않습니다.&quot;, &quot;현재가가 EMA20보다 14.8% 높아 눌림목 진입으로 보기 어렵습니다.&quot;], &quot;observation&quot;: false}, {&quot;code&quot;: &quot;096770&quot;, &quot;name&quot;: &quot;SK이노베이션&quot;, &quot;market&quot;: &quot;KOSPI&quot;, &quot;status&quot;: &quot;관심&quot;, &quot;final_action&quot;: &quot;관심&quot;, &quot;signal_type&quot;: &quot;돌파 후 재확인&quot;, &quot;direction_score&quot;: 77, &quot;entry_score&quot;: 73, &quot;rr_ratio&quot;: 2.0, &quot;entry_range&quot;: &quot;136,600 ~ 140,400&quot;, &quot;stop_loss&quot;: &quot;125,300&quot;, &quot;target_1&quot;: &quot;157,800&quot;, &quot;current_price&quot;: &quot;138,300&quot;, &quot;data_basis_date&quot;: &quot;2026-09-04&quot;, &quot;detail_path&quot;: &quot;details/096770.html&quot;, &quot;badges&quot;: [&quot;관심&quot;, &quot;외국인 +&quot;, &quot;기관 +&quot;], &quot;reasons&quot;: [&quot;돌파 가격 재확인 구간&quot;, &quot;MACD 히스토그램 개선&quot;, &quot;ADX 22, +DI 우위&quot;], &quot;cautions&quot;: [&quot;현재가가 EMA20보다 10.8% 높아 눌림목 진입으로 보기 어렵습니다.&quot;], &quot;observation&quot;: false}, {&quot;code&quot;: &quot;018260&quot;, &quot;name&quot;: &quot;삼성에스디에스&quot;, &quot;market&quot;: &quot;KOSPI&quot;, &quot;status&quot;: &quot;관심&quot;, &quot;final_action&quot;: &quot;관심&quot;, &quot;signal_type&quot;: &quot;상승추세 눌림목&quot;, &quot;direction_score&quot;: 72, &quot;entry_score&quot;: 91, &quot;rr_ratio&quot;: 2.0, &quot;entry_range&quot;: &quot;234,000 ~ 238,800&quot;, &quot;stop_loss&quot;: &quot;218,000&quot;, &quot;target_1&quot;: &quot;268,100&quot;, &quot;current_price&quot;: &quot;238,000&quot;, &quot;data_basis_date&quot;: &quot;2026-09-04&quot;, &quot;detail_path&quot;: &quot;details/018260.html&quot;, &quot;badges&quot;: [&quot;관심&quot;, &quot;외국인 +&quot;, &quot;기관 +&quot;], &quot;reasons&quot;: [&quot;상승추세 안에서 EMA/VWAP 눌림 후 재상승&quot;, &quot;MACD 히스토그램 개선&quot;, &quot;외국인 5일 순매수&quot;], &quot;cautions&quot;: [&quot;시장 추세가 약해 신규 진입 점수 제한&quot;], &quot;observation&quot;: false}], &quot;supplemental&quot;: [{&quot;code&quot;: &quot;267270&quot;, &quot;name&quot;: &quot;HD건설기계&quot;, &quot;market&quot;: &quot;KOSPI&quot;, &quot;status&quot;: &quot;눌림 대기&quot;, &quot;final_action&quot;: &quot;눌림 확인&quot;, &quot;signal_type&quot;: &quot;대기&quot;, &quot;direction_score&quot;: 55, &quot;entry_score&quot;: 52, &quot;rr_ratio&quot;: 2.0, &quot;entry_range&quot;: &quot;131,500 ~ 136,400&quot;, &quot;stop_loss&quot;: &quot;126,900&quot;, &quot;target_1&quot;: &quot;163,500&quot;, &quot;current_price&quot;: &quot;140,000&quot;, &quot;data_basis_date&quot;: &quot;2026-09-04&quot;, &quot;detail_path&quot;: &quot;details/267270.html&quot;, &quot;badges&quot;: [&quot;외국인 +&quot;, &quot;기관 +&quot;], &quot;reasons&quot;: [&quot;MACD 히스토그램 개선&quot;, &quot;거래량 21% 증가&quot;, &quot;외국인 5일 순매수&quot;], &quot;cautions&quot;: [&quot;현재가가 권장 진입가 상단보다 3.6% 높아 강한 매수로 표시하지 않습니다.&quot;], &quot;observation&quot;: true}, {&quot;code&quot;: &quot;175330&quot;, &quot;name&quot;: &quot;JB금융지주&quot;, &quot;market&quot;: &quot;KOSPI&quot;, &quot;status&quot;: &quot;눌림 대기&quot;, &quot;final_action&quot;: &quot;눌림 확인&quot;, &quot;signal_type&quot;: &quot;대기&quot;, &quot;direction_score&quot;: 52, &quot;entry_score&quot;: 58, &quot;rr_ratio&quot;: 2.0, &quot;entry_range&quot;: &quot;29,900 ~ 30,400&quot;, &quot;stop_loss&quot;: &quot;28,750&quot;, &quot;target_1&quot;: &quot;34,400&quot;, &quot;current_price&quot;: &quot;31,000&quot;, &quot;data_basis_date&quot;: &quot;2026-09-04&quot;, &quot;detail_path&quot;: &quot;details/175330.html&quot;, &quot;badges&quot;: [&quot;기관 +&quot;, &quot;거래량 급증&quot;], &quot;reasons&quot;: [&quot;MACD 히스토그램 개선&quot;, &quot;ADX 21, +DI 우위&quot;, &quot;거래량 124% 증가&quot;], &quot;cautions&quot;: [&quot;현재가가 권장 진입가 상단보다 2.0% 높아 강한 매수로 표시하지 않습니다.&quot;, &quot;현재가가 EMA20보다 8.0% 높아 눌림목 진입으로 보기 어렵습니다.&quot;], &quot;observation&quot;: true}, {&quot;code&quot;: &quot;377300&quot;, &quot;name&quot;: &quot;카카오페이&quot;, &quot;market&quot;: &quot;KOSPI&quot;, &quot;status&quot;: &quot;눌림 대기&quot;, &quot;final_action&quot;: &quot;눌림 확인&quot;, &quot;signal_type&quot;: &quot;대기&quot;, &quot;direction_score&quot;: 50, &quot;entry_score&quot;: 65, &quot;rr_ratio&quot;: 2.0, &quot;entry_range&quot;: &quot;45,350 ~ 46,350&quot;, &quot;stop_loss&quot;: &quot;43,100&quot;, &quot;target_1&quot;: &quot;53,600&quot;, &quot;current_price&quot;: &quot;47,300&quot;, &quot;data_basis_date&quot;: &quot;2026-09-04&quot;, &quot;detail_path&quot;: &quot;details/377300.html&quot;, &quot;badges&quot;: [&quot;외국인 +&quot;, &quot;기관 +&quot;], &quot;reasons&quot;: [&quot;MACD 히스토그램 개선&quot;, &quot;ADX 20, +DI 우위&quot;, &quot;거래량 33% 증가&quot;], &quot;cautions&quot;: [&quot;현재가가 권장 진입가 상단보다 2.3% 높아 강한 매수로 표시하지 않습니다.&quot;], &quot;observation&quot;: true}, {&quot;code&quot;: &quot;003230&quot;, &quot;name&quot;: &quot;삼양식품&quot;, &quot;market&quot;: &quot;KOSPI&quot;, &quot;status&quot;: &quot;눌림 대기&quot;, &quot;final_action&quot;: &quot;눌림 확인&quot;, &quot;signal_type&quot;: &quot;대기&quot;, &quot;direction_score&quot;: 46, &quot;entry_score&quot;: 76, &quot;rr_ratio&quot;: 2.0, &quot;entry_range&quot;: &quot;1,372,800 ~ 1,408,200&quot;, &quot;stop_loss&quot;: &quot;1,306,400&quot;, &quot;target_1&quot;: &quot;1,588,300&quot;, &quot;current_price&quot;: &quot;1,417,000&quot;, &quot;data_basis_date&quot;: &quot;2026-09-04&quot;, &quot;detail_path&quot;: &quot;details/003230.html&quot;, &quot;badges&quot;: [&quot;외국인 +&quot;], &quot;reasons&quot;: [&quot;ADX 39, +DI 우위&quot;, &quot;외국인 5일 순매수&quot;], &quot;cautions&quot;: [&quot;현재가가 권장 진입가 상단보다 1.1% 높아 강한 매수로 표시하지 않습니다.&quot;], &quot;observation&quot;: true}, {&quot;code&quot;: &quot;161890&quot;, &quot;name&quot;: &quot;한국콜마&quot;, &quot;market&quot;: &quot;KOSPI&quot;, &quot;status&quot;: &quot;눌림 대기&quot;, &quot;final_action&quot;: &quot;눌림 확인&quot;, &quot;signal_type&quot;: &quot;대기&quot;, &quot;direction_score&quot;: 46, &quot;entry_score&quot;: 58, &quot;rr_ratio&quot;: 2.0, &quot;entry_range&quot;: &quot;137,300 ~ 141,800&quot;, &quot;stop_loss&quot;: &quot;131,700&quot;, &quot;target_1&quot;: &quot;171,300&quot;, &quot;current_price&quot;: &quot;145,800&quot;, &quot;data_basis_date&quot;: &quot;2026-09-04&quot;, &quot;detail_path&quot;: &quot;details/161890.html&quot;, &quot;badges&quot;: [&quot;외국인 +&quot;], &quot;reasons&quot;: [&quot;ADX 39, +DI 우위&quot;, &quot;외국인 5일 순매수&quot;], &quot;cautions&quot;: [&quot;현재가가 권장 진입가 상단보다 3.5% 높아 강한 매수로 표시하지 않습니다.&quot;], &quot;observation&quot;: true}, {&quot;code&quot;: &quot;005830&quot;, &quot;name&quot;: &quot;DB손해보험&quot;, &quot;market&quot;: &quot;KOSPI&quot;, &quot;status&quot;: &quot;눌림 대기&quot;, &quot;final_action&quot;: &quot;눌림 확인&quot;, &quot;signal_type&quot;: &quot;대기&quot;, &quot;direction_score&quot;: 44, &quot;entry_score&quot;: 70, &quot;rr_ratio&quot;: 2.0, &quot;entry_range&quot;: &quot;190,800 ~ 194,500&quot;, &quot;stop_loss&quot;: &quot;180,200&quot;, &quot;target_1&quot;: &quot;218,900&quot;, &quot;current_price&quot;: &quot;195,700&quot;, &quot;data_basis_date&quot;: &quot;2026-09-04&quot;, &quot;detail_path&quot;: &quot;details/005830.html&quot;, &quot;badges&quot;: [&quot;기관 +&quot;], &quot;reasons&quot;: [&quot;ADX 34, +DI 우위&quot;, &quot;기관 5일 순매수&quot;], &quot;cautions&quot;: [&quot;현재가가 권장 진입가 상단보다 0.8% 높아 강한 매수로 표시하지 않습니다.&quot;], &quot;observation&quot;: true}]}, &quot;source_run_id&quot;: &quot;34053769167&quot;, &quot;source_run_attempt&quot;: &quot;1&quot;, &quot;source_workflow&quot;: &quot;Update static mobile dashboard&quot;, &quot;source_commit&quot;: &quot;1cec516a8f26fb15da5b5e61b40b172a3e81a591&quot;, &quot;source_branch&quot;: &quot;main&quot;, &quot;deployed_at_kst&quot;: &quot;2026-09-07 04:07 KST&quot;, &quot;build_id&quot;: &quot;static-20260907-0407-1cec516-34053769167&quot;, &quot;previous_success_generated_at&quot;: &quot;2026-09-07 01:59 KST&quot;}</script>
+  <script>
+    window.dashboardFreshness = {
+      rankingGeneratedAt: "2026-09-07T04:07:47.924438+09:00",
+      pageCheckedAt: "2026-09-07T04:07:47.924438+09:00",
+      marketSession: "closed",
+      staleAfterMinutes: 15,
+      veryStaleAfterMinutes: 30,
+      heartbeatStaleAfterMinutes: 120
+      ,stoppedAfterMinutes: 60
+      ,offHoursStaleAfterMinutes: 90
+      ,offHoursStoppedAfterMinutes: 180
+      ,offHoursCriticalAfterMinutes: 360
+      ,realtimeEnabled: false
+    };
+  </script>
+  <script>
+    (function () {
+      const info = window.dashboardFreshness || {};
+      const ageEl = document.getElementById("update-age");
+      const rankingAgeEl = document.getElementById("ranking-age");
+      const alertEl = document.getElementById("freshness-alert");
+      const checked = info.pageCheckedAt ? new Date(info.pageCheckedAt) : null;
+      const ranking = info.rankingGeneratedAt ? new Date(info.rankingGeneratedAt) : null;
+      function ageTextFrom(dateValue) {
+        const minutes = Math.max(0, Math.floor((Date.now() - dateValue.getTime()) / 60000));
+        if (minutes < 1) return ["방금 업데이트", minutes];
+        if (minutes >= 60) {
+          const hours = Math.floor(minutes / 60);
+          const rest = minutes % 60;
+          return [rest ? `${hours}시간 ${rest}분 전` : `${hours}시간 전`, minutes];
+        }
+        return [`${minutes}분 전`, minutes];
+      }
+      if (!checked || Number.isNaN(checked.getTime())) {
+        if (ageEl) ageEl.textContent = "업데이트 시각 확인 필요";
+        return;
+      }
+      const [checkedText, checkedMinutes] = ageTextFrom(checked);
+      if (ageEl) ageEl.textContent = `${checkedText} 점검`;
+      if (rankingAgeEl && ranking && !Number.isNaN(ranking.getTime())) {
+        const [rankingText] = ageTextFrom(ranking);
+        rankingAgeEl.textContent = `${rankingText} 계산`;
+      }
+      if (alertEl && info.marketSession === "open" && checkedMinutes >= Number(info.stoppedAfterMinutes || 60)) {
+        alertEl.hidden = false;
+        alertEl.textContent = "장중 랭킹 자동 수집이 60분 이상 갱신되지 않았습니다. 자동 수집 중단이 의심됩니다.";
+      } else if (alertEl && info.marketSession === "open" && checkedMinutes >= Number(info.veryStaleAfterMinutes || 30)) {
+        alertEl.hidden = false;
+        alertEl.textContent = "장중 랭킹 자동 수집이 30분 이상 갱신되지 않았습니다. GitHub Actions 실행 상태를 확인하세요.";
+      } else if (alertEl && info.marketSession === "open" && checkedMinutes >= Number(info.staleAfterMinutes || 15)) {
+        alertEl.hidden = false;
+        alertEl.textContent = "장중 최신 자동 수집 후 15분 이상 지났습니다. 다음 자동 수집을 기다리거나 새로고침하세요.";
+      } else if (alertEl && info.marketSession !== "open" && checkedMinutes >= Number(info.offHoursCriticalAfterMinutes || 360)) {
+        alertEl.hidden = false;
+        alertEl.textContent = "장외/휴장 재계산이 6시간 이상 갱신되지 않았습니다. 자동화 또는 공개 배포 상태를 즉시 확인하세요.";
+      } else if (alertEl && info.marketSession !== "open" && checkedMinutes >= Number(info.offHoursStoppedAfterMinutes || 180)) {
+        alertEl.hidden = false;
+        alertEl.textContent = "장외/휴장 재계산이 3시간 이상 갱신되지 않았습니다. GitHub Actions 실행 상태를 확인하세요.";
+      } else if (alertEl && info.marketSession !== "open" && checkedMinutes >= Number(info.offHoursStaleAfterMinutes || 90)) {
+        alertEl.hidden = false;
+        alertEl.textContent = "장외/휴장 재계산이 90분 이상 갱신되지 않았습니다. 자동화 실행 상태를 확인하세요.";
+      } else if (alertEl && info.marketSession !== "open") {
+        alertEl.hidden = false;
+        alertEl.textContent = "현재는 장외/휴장 시간입니다. 데이터 기준일은 마지막 거래일이며, 랭킹 계산은 주기적으로 갱신됩니다.";
+      }
+      window.setTimeout(function () { window.location.reload(); }, 5 * 60 * 1000);
+    })();
+  </script>
+</body>
+</html>
