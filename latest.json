@@ -1,0 +1,960 @@
+{
+  "schema_version": "static-dashboard-v1",
+  "generated_at": "2026-09-13T09:56:03.740202+09:00",
+  "generated_at_kst": "2026-09-13 09:56 KST",
+  "ranking_generated_at": "2026-09-10T18:39:12.069544+09:00",
+  "ranking_generated_at_kst": "2026-09-10 18:39 KST",
+  "page_checked_at": "2026-09-13T09:56:03.740202+09:00",
+  "page_checked_at_kst": "2026-09-13 09:56 KST",
+  "market_session": "weekend",
+  "market_session_label": "주말/휴장",
+  "heartbeat_mode": false,
+  "collection_status": "failed",
+  "failure_message": "No tables found",
+  "realtime": {
+    "provider": "disabled",
+    "requested": false,
+    "configured": false,
+    "attempted": false,
+    "enabled": false,
+    "auth_success": false,
+    "quote_success_count": 0,
+    "quote_fail_count": 0,
+    "success_count": 0,
+    "fail_count": 0,
+    "skipped_reason": "kis_disabled",
+    "last_success_at_kst": "",
+    "error": "",
+    "diagnostic_hint": ""
+  },
+  "internet_quote": {
+    "enabled": true,
+    "provider": "naver_finance",
+    "attempted": true,
+    "success_count": 117,
+    "fail_count": 0,
+    "last_success_at_kst": "2026-09-10 18:39 KST",
+    "freshness_label": "인터넷 공개 현재가/일봉 기준",
+    "error": ""
+  },
+  "previous_result_used": true,
+  "market": "KOSPI",
+  "settings": {
+    "pages": 3,
+    "strictness": "보수적",
+    "count": 360,
+    "min_score": 70,
+    "include_watch": false,
+    "exclude_non_common": true,
+    "fill_observation_top10": true
+  },
+  "data_basis": {
+    "ranking_data": "인터넷 공개 현재가/일봉 데이터 기준",
+    "data_basis_date": "2026-09-10",
+    "last_collected_at": "2026-09-10 18:39 KST",
+    "realtime": "OFF",
+    "collection_method": "GitHub Actions 자동 수집",
+    "scanned_count": 117,
+    "result_count": 117,
+    "filtered_count": 5,
+    "display_count": 5,
+    "page_checked_at": "2026-09-13 09:56 KST",
+    "market_session": "weekend",
+    "market_session_label": "주말/휴장"
+  },
+  "freshness": {
+    "generated_at": "2026-09-13T09:56:03.740202+09:00",
+    "generated_at_kst": "2026-09-13 09:56 KST",
+    "refresh_interval_minutes": 10,
+    "stale_after_minutes": 15,
+    "very_stale_after_minutes": 30,
+    "stopped_after_minutes": 60,
+    "heartbeat_interval_minutes": 60,
+    "heartbeat_stale_after_minutes": 120,
+    "off_hours_stale_after_minutes": 90,
+    "off_hours_stopped_after_minutes": 180,
+    "off_hours_critical_after_minutes": 360
+  },
+  "market_state": {
+    "ok": true,
+    "score": 12,
+    "label": "시장 중립",
+    "reason": "지수 급락 아님"
+  },
+  "macro_brief": {
+    "updated_at": "2026-09-10T18:37+09:00",
+    "mode": "close",
+    "indexes": {
+      "nasdaq": {
+        "label": "NASDAQ",
+        "value": "26,253.34",
+        "change": "-0.64%",
+        "change_number": -0.636,
+        "status": "available",
+        "market_time": 1788988559
+      },
+      "sp500": {
+        "label": "S&P500",
+        "value": "7,636.36",
+        "change": "-0.48%",
+        "change_number": -0.484,
+        "status": "available",
+        "market_time": 1788986599
+      },
+      "sox": {
+        "label": "SOX",
+        "value": "11,931.32",
+        "change": "+0.37%",
+        "change_number": 0.366,
+        "status": "available",
+        "market_time": 1788988559
+      },
+      "vix": {
+        "label": "VIX",
+        "value": "16.45",
+        "change": "-0.06%",
+        "change_number": -0.061,
+        "status": "available",
+        "market_time": 1789032121
+      },
+      "usdkrw": {
+        "label": "USD/KRW",
+        "value": "1,342.08",
+        "change": "+0.19%",
+        "change_number": 0.1888,
+        "status": "available",
+        "market_time": 1789033025
+      },
+      "us10y": {
+        "label": "미국 10년물",
+        "value": "4.84%",
+        "change": "+0.03%p",
+        "change_number": 0.031,
+        "status": "available",
+        "market_time": 1788980395
+      },
+      "us2y": {
+        "label": "미국 2년물",
+        "value": null,
+        "change": null,
+        "status": "missing",
+        "error": "404 Client Error: Not Found for url: https://query1.finance.yahoo.com/v8/finance/chart/%5EUST2Y?interval=5m&range=5d&includePrePost=true"
+      },
+      "wti": {
+        "label": "WTI",
+        "value": "97.48",
+        "change": "+1.49%",
+        "change_number": 1.489,
+        "status": "available",
+        "market_time": 1789032426
+      },
+      "dxy": {
+        "label": "DXY",
+        "value": "98.79",
+        "change": "-0.03%",
+        "change_number": -0.026,
+        "status": "available",
+        "market_time": 1789032426
+      }
+    },
+    "macro_judgment": "혼조",
+    "market_judgment": "혼조",
+    "market_summary": "지수·금리·환율·뉴스 신호가 한 방향으로 충분히 모이지 않았습니다.",
+    "korea_takeaway": "업종별 차별화 가능성, 개별 종목 진입 조건 우선",
+    "issues": [
+      {
+        "category": "rates_fx",
+        "title": "국채금리/달러/환율",
+        "summary": "미국 금리와 달러 흐름은 한국 성장주와 외국인 수급 부담에 직접 연결됩니다.",
+        "evidence_title": "Treasury yields dollar exchange rate",
+        "impact": "risk_mixed",
+        "importance": 88,
+        "affected_assets": [
+          "DXY",
+          "USD/KRW",
+          "US yields"
+        ],
+        "affected_korea_sectors": [
+          "반도체",
+          "자동차",
+          "외국인 수급"
+        ],
+        "source_count": 1,
+        "freshness": "latest",
+        "korea_impact": "환율 부담 시 외국인 수급과 고밸류 성장주 주의"
+      },
+      {
+        "category": "indexes_volatility",
+        "title": "미국 지수/VIX",
+        "summary": "미국 지수와 VIX 흐름은 당일 위험선호·위험회피 판단의 기준입니다.",
+        "evidence_title": "Nasdaq S&P500 VIX stock market",
+        "impact": "risk_mixed",
+        "importance": 86,
+        "affected_assets": [
+          "NASDAQ",
+          "S&P500",
+          "VIX"
+        ],
+        "affected_korea_sectors": [
+          "성장주",
+          "방어주"
+        ],
+        "source_count": 1,
+        "freshness": "latest",
+        "korea_impact": "지수 방향보다 개별 종목 가격 위치와 손익비를 별도 확인"
+      },
+      {
+        "category": "semis_ai_bigtech",
+        "title": "반도체/AI/빅테크",
+        "summary": "AI·반도체·빅테크 흐름은 국내 반도체와 성장주 심리에 영향을 줄 수 있습니다.",
+        "evidence_title": "HD Hyundai Heavy Industries to Invest KRW 1 Trillion in Future Engine and SMR Businesses",
+        "impact": "risk_on",
+        "importance": 84,
+        "affected_assets": [
+          "SOX",
+          "NASDAQ",
+          "big tech"
+        ],
+        "affected_korea_sectors": [
+          "반도체",
+          "AI",
+          "인터넷"
+        ],
+        "source_count": 39,
+        "freshness": "latest",
+        "korea_impact": "반도체 우호 가능성, 급등주는 추격보다 진입 조건 분리 확인"
+      },
+      {
+        "category": "oil_commodities",
+        "title": "유가/원자재",
+        "summary": "유가와 원자재 변동은 물가 기대와 운송·화학·에너지 업종에 영향을 줍니다.",
+        "evidence_title": "oil prices commodity inflation",
+        "impact": "risk_mixed",
+        "importance": 78,
+        "affected_assets": [
+          "WTI",
+          "inflation",
+          "energy"
+        ],
+        "affected_korea_sectors": [
+          "에너지",
+          "화학",
+          "운송"
+        ],
+        "source_count": 1,
+        "freshness": "latest",
+        "korea_impact": "에너지·방산·운송·화학 업종 차별화 가능"
+      },
+      {
+        "category": "china_policy",
+        "title": "중국/관세/수출 규제",
+        "summary": "중국 경기와 미중 규제는 반도체, 2차전지, 화학, 소비재 수요에 영향을 줄 수 있습니다.",
+        "evidence_title": "Market Chatter: UBS to Close China Mutual Fund Sales Unit",
+        "impact": "risk_mixed",
+        "importance": 72,
+        "affected_assets": [
+          "China demand",
+          "export controls"
+        ],
+        "affected_korea_sectors": [
+          "반도체",
+          "2차전지",
+          "화학",
+          "소비재"
+        ],
+        "source_count": 13,
+        "freshness": "latest",
+        "korea_impact": "반도체·2차전지·화학·소비재 업종 영향 확인"
+      },
+      {
+        "title": "연준/FOMC",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "금리 경로 확인 전까지 성장주와 고밸류 업종 추격은 분리 대응이 필요합니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "물가/CPI/PCE",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "물가 지표는 금리 기대와 성장주 밸류 부담을 흔들 수 있습니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "고용/임금",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "고용 둔화와 임금 흐름은 경기민감주와 위험자산 선호에 영향을 줄 수 있습니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      }
+    ],
+    "expanded_issues": [
+      {
+        "category": "rates_fx",
+        "title": "국채금리/달러/환율",
+        "summary": "미국 금리와 달러 흐름은 한국 성장주와 외국인 수급 부담에 직접 연결됩니다.",
+        "evidence_title": "Treasury yields dollar exchange rate",
+        "impact": "risk_mixed",
+        "importance": 88,
+        "affected_assets": [
+          "DXY",
+          "USD/KRW",
+          "US yields"
+        ],
+        "affected_korea_sectors": [
+          "반도체",
+          "자동차",
+          "외국인 수급"
+        ],
+        "source_count": 1,
+        "freshness": "latest",
+        "korea_impact": "환율 부담 시 외국인 수급과 고밸류 성장주 주의"
+      },
+      {
+        "category": "indexes_volatility",
+        "title": "미국 지수/VIX",
+        "summary": "미국 지수와 VIX 흐름은 당일 위험선호·위험회피 판단의 기준입니다.",
+        "evidence_title": "Nasdaq S&P500 VIX stock market",
+        "impact": "risk_mixed",
+        "importance": 86,
+        "affected_assets": [
+          "NASDAQ",
+          "S&P500",
+          "VIX"
+        ],
+        "affected_korea_sectors": [
+          "성장주",
+          "방어주"
+        ],
+        "source_count": 1,
+        "freshness": "latest",
+        "korea_impact": "지수 방향보다 개별 종목 가격 위치와 손익비를 별도 확인"
+      },
+      {
+        "category": "semis_ai_bigtech",
+        "title": "반도체/AI/빅테크",
+        "summary": "AI·반도체·빅테크 흐름은 국내 반도체와 성장주 심리에 영향을 줄 수 있습니다.",
+        "evidence_title": "HD Hyundai Heavy Industries to Invest KRW 1 Trillion in Future Engine and SMR Businesses",
+        "impact": "risk_on",
+        "importance": 84,
+        "affected_assets": [
+          "SOX",
+          "NASDAQ",
+          "big tech"
+        ],
+        "affected_korea_sectors": [
+          "반도체",
+          "AI",
+          "인터넷"
+        ],
+        "source_count": 39,
+        "freshness": "latest",
+        "korea_impact": "반도체 우호 가능성, 급등주는 추격보다 진입 조건 분리 확인"
+      },
+      {
+        "category": "oil_commodities",
+        "title": "유가/원자재",
+        "summary": "유가와 원자재 변동은 물가 기대와 운송·화학·에너지 업종에 영향을 줍니다.",
+        "evidence_title": "oil prices commodity inflation",
+        "impact": "risk_mixed",
+        "importance": 78,
+        "affected_assets": [
+          "WTI",
+          "inflation",
+          "energy"
+        ],
+        "affected_korea_sectors": [
+          "에너지",
+          "화학",
+          "운송"
+        ],
+        "source_count": 1,
+        "freshness": "latest",
+        "korea_impact": "에너지·방산·운송·화학 업종 차별화 가능"
+      },
+      {
+        "category": "china_policy",
+        "title": "중국/관세/수출 규제",
+        "summary": "중국 경기와 미중 규제는 반도체, 2차전지, 화학, 소비재 수요에 영향을 줄 수 있습니다.",
+        "evidence_title": "Market Chatter: UBS to Close China Mutual Fund Sales Unit",
+        "impact": "risk_mixed",
+        "importance": 72,
+        "affected_assets": [
+          "China demand",
+          "export controls"
+        ],
+        "affected_korea_sectors": [
+          "반도체",
+          "2차전지",
+          "화학",
+          "소비재"
+        ],
+        "source_count": 13,
+        "freshness": "latest",
+        "korea_impact": "반도체·2차전지·화학·소비재 업종 영향 확인"
+      },
+      {
+        "title": "연준/FOMC",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "금리 경로 확인 전까지 성장주와 고밸류 업종 추격은 분리 대응이 필요합니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "물가/CPI/PCE",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "물가 지표는 금리 기대와 성장주 밸류 부담을 흔들 수 있습니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "고용/임금",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "고용 둔화와 임금 흐름은 경기민감주와 위험자산 선호에 영향을 줄 수 있습니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "유가/지정학",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "유가와 지정학 리스크는 물가 부담과 위험회피 심리를 키울 수 있습니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      },
+      {
+        "title": "버핏/기관 수급",
+        "summary": "관련 뉴스 확인 필요",
+        "korea_impact": "대형 기관과 장기투자자 흐름은 글로벌 위험 선호를 해석하는 참고값입니다.",
+        "source_count": 0,
+        "evidence_title": "확인 필요"
+      }
+    ],
+    "news_items": [
+      "미국 금리와 달러 흐름은 한국 성장주와 외국인 수급 부담에 직접 연결됩니다.",
+      "미국 지수와 VIX 흐름은 당일 위험선호·위험회피 판단의 기준입니다.",
+      "AI·반도체·빅테크 흐름은 국내 반도체와 성장주 심리에 영향을 줄 수 있습니다.",
+      "유가와 원자재 변동은 물가 기대와 운송·화학·에너지 업종에 영향을 줍니다.",
+      "중국 경기와 미중 규제는 반도체, 2차전지, 화학, 소비재 수요에 영향을 줄 수 있습니다."
+    ],
+    "data_status": "available",
+    "news_provider": "gdelt+rss",
+    "news_fallback_used": false,
+    "news_source_count": 12,
+    "news_last_checked_at_kst": "2026-09-10 18:37 KST"
+  },
+  "us_breaking_news": {
+    "provider": "gdelt+rss",
+    "enabled": true,
+    "attempted": true,
+    "success_count": 12,
+    "hotpick_count": 12,
+    "fallback_used": false,
+    "fallback_reason": "",
+    "last_checked_at_kst": "2026-09-10 18:37 KST",
+    "last_success_at_kst": "2026-09-10 18:37 KST",
+    "provider_errors": {},
+    "fetch_error": "",
+    "items": [
+      {
+        "title": "IRGC Claims Strikes on US Vessels , Oil Tankers and Air Base in Escalating Gulf Confrontation",
+        "url": "https://www.sentinelassam.com/more-news/international/irgc-claims-strikes-on-us-vessels-oil-tankers-and-air-base-in-escalating-gulf-confrontation",
+        "source": "sentinelassam.com",
+        "provider": "gdelt",
+        "published_at": "2026-09-10T09:00:00+00:00",
+        "published_at_kst": "2026-09-10 18:00 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "US - Iran Conflict Escalates Near UAE : Tanker Attacks , $100 Oil and Flight Disruptions – What Residents Need to Know Today ( Sept . 10 )",
+        "url": "https://gulfnews.com/uae/us-iran-conflict-what-uae-residents-need-to-know-today-sept-10-1.500669300",
+        "source": "gulfnews.com",
+        "provider": "gdelt",
+        "published_at": "2026-09-10T08:15:00+00:00",
+        "published_at_kst": "2026-09-10 17:15 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "US war against Iran enters new phase with strikes on oil tankers",
+        "url": "https://www.wsws.org/en/articles/2026/09/10/faap-s10.html",
+        "source": "wsws.org",
+        "provider": "gdelt",
+        "published_at": "2026-09-10T05:45:00+00:00",
+        "published_at_kst": "2026-09-10 14:45 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "Iran fires electro - optical missile for the first time on US warships",
+        "url": "https://nypost.com/2026/09/09/world-news/iran-fires-electro-optical-missile-for-the-first-time-on-us-warships/",
+        "source": "nypost.com",
+        "provider": "gdelt",
+        "published_at": "2026-09-09T22:45:00+00:00",
+        "published_at_kst": "2026-09-10 07:45 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "US - Iran tanker attacks signal a new phase in war",
+        "url": "https://www.cbc.bb/news/international-news/us-iran-tanker-attacks-signal-a-new-phase-in-war/",
+        "source": "cbc.bb",
+        "provider": "gdelt",
+        "published_at": "2026-09-09T20:00:00+00:00",
+        "published_at_kst": "2026-09-10 05:00 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "US military says it destroyed 5 more Iranian oil tankers after missile attacks on Navy warship - WSVN 7News | Miami News , Weather , Sports",
+        "url": "https://wsvn.com/news/us-world/us-military-says-it-destroyed-5-more-iranian-oil-tankers-after-missile-attacks-on-navy-warship/",
+        "source": "wsvn.com",
+        "provider": "gdelt",
+        "published_at": "2026-09-09T17:45:00+00:00",
+        "published_at_kst": "2026-09-10 02:45 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "US , Iran Trade Strikes On Shipping As Oil Prices Surge Above $100 A Barrel",
+        "url": "https://www.rferl.org/a/iran-us-oil-shipping-hormuz/33851101.html",
+        "source": "rferl.org",
+        "provider": "gdelt",
+        "published_at": "2026-09-09T16:15:00+00:00",
+        "published_at_kst": "2026-09-10 01:15 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "US Military Says It Destroyed 5 More Iranian Oil Tankers After Missile Attacks on Navy Warship",
+        "url": "https://www.military.com/us-military-says-it-destroyed-5-more-iranian-oil-tankers-after-missile-attacks-on-navy-warship",
+        "source": "military.com",
+        "provider": "gdelt",
+        "published_at": "2026-09-09T12:30:00+00:00",
+        "published_at_kst": "2026-09-09 21:30 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "IRGC claims attacks on two US vessels , eight tankers",
+        "url": "https://www.orissapost.com/irgc-claims-attacks-on-two-us-vessels-eight-tankers/",
+        "source": "orissapost.com",
+        "provider": "gdelt",
+        "published_at": "2026-09-09T12:15:00+00:00",
+        "published_at_kst": "2026-09-09 21:15 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "Iran IRGC says it attacked two US vessels , eight oil tankers",
+        "url": "https://www.prokerala.com/news/articles/a1810302.html",
+        "source": "prokerala.com",
+        "provider": "gdelt",
+        "published_at": "2026-09-09T12:00:00+00:00",
+        "published_at_kst": "2026-09-09 21:00 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "Oil tops $100 as Middle East conflict intensifies",
+        "url": "http://www.pakistantelegraph.com/news/279295990/oil-tops-100-as-middle-east-conflict-intensifies",
+        "source": "pakistantelegraph.com",
+        "provider": "gdelt",
+        "published_at": "2026-09-09T12:00:00+00:00",
+        "published_at_kst": "2026-09-09 21:00 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      },
+      {
+        "title": "Tanker war 2 . 0 : How US - Iran ship attacks are escalating",
+        "url": "https://www.thenationalnews.com/news/gulf/2026/09/09/tanker-war-20-how-us-iran-ship-attacks-are-escalating/",
+        "source": "thenationalnews.com",
+        "provider": "gdelt",
+        "published_at": "2026-09-09T12:00:00+00:00",
+        "published_at_kst": "2026-09-09 21:00 KST",
+        "category": "geopolitics_oil",
+        "category_label": "지정학/유가",
+        "severity": "critical",
+        "is_hotpick": true,
+        "importance_score": 100,
+        "market_impact_score": 100,
+        "korea_impact": "중동 군사충돌과 호르무즈 리스크는 유가·달러·방산·정유·항공·화학·성장주 심리에 직접 영향을 줄 수 있습니다.",
+        "tickers": []
+      }
+    ],
+    "fallback_message": ""
+  },
+  "rankings": {
+    "qualified": [
+      {
+        "code": "028050",
+        "name": "삼성E&A",
+        "market": "KOSPI",
+        "status": "매수 후보",
+        "final_action": "분할 진입 검토",
+        "signal_type": "상승추세 눌림목",
+        "direction_score": 85,
+        "entry_score": 90,
+        "rr_ratio": 2.12,
+        "entry_range": "48,350 ~ 49,350",
+        "stop_loss": "46,250",
+        "target_1": "56,650",
+        "current_price": "50,400",
+        "data_basis_date": "2026-09-10",
+        "detail_path": "details/028050.html",
+        "badges": [
+          "매수 후보",
+          "외국인 +",
+          "기관 +"
+        ],
+        "reasons": [
+          "상승추세 안에서 EMA/VWAP 눌림 후 재상승",
+          "MACD 히스토그램 개선",
+          "거래량 18% 증가"
+        ],
+        "cautions": [],
+        "observation": false
+      },
+      {
+        "code": "088350",
+        "name": "한화생명",
+        "market": "KOSPI",
+        "status": "눌림 대기",
+        "final_action": "눌림 확인",
+        "signal_type": "상승추세 눌림목",
+        "direction_score": 83,
+        "entry_score": 77,
+        "rr_ratio": 2.0,
+        "entry_range": "5,780 ~ 5,890",
+        "stop_loss": "5,490",
+        "target_1": "6,710",
+        "current_price": "5,980",
+        "data_basis_date": "2026-09-10",
+        "detail_path": "details/088350.html",
+        "badges": [
+          "기관 +"
+        ],
+        "reasons": [
+          "상승추세 안에서 EMA/VWAP 눌림 후 재상승",
+          "MACD 히스토그램 개선",
+          "ADX 40, +DI 우위"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 1.7% 높아 강한 매수로 표시하지 않습니다."
+        ],
+        "observation": false
+      },
+      {
+        "code": "004020",
+        "name": "현대제철",
+        "market": "KOSPI",
+        "status": "관심",
+        "final_action": "관심",
+        "signal_type": "돌파 후 재확인",
+        "direction_score": 73,
+        "entry_score": 78,
+        "rr_ratio": 2.0,
+        "entry_range": "33,500 ~ 34,200",
+        "stop_loss": "31,400",
+        "target_1": "37,500",
+        "current_price": "33,850",
+        "data_basis_date": "2026-09-10",
+        "detail_path": "details/004020.html",
+        "badges": [
+          "관심",
+          "기관 +"
+        ],
+        "reasons": [
+          "돌파 가격 재확인 구간",
+          "MACD 히스토그램 개선",
+          "ADX 28, +DI 우위"
+        ],
+        "cautions": [
+          "현재가가 EMA20보다 9.8% 높아 눌림목 진입으로 보기 어렵습니다."
+        ],
+        "observation": false
+      },
+      {
+        "code": "267270",
+        "name": "HD건설기계",
+        "market": "KOSPI",
+        "status": "관심",
+        "final_action": "관심",
+        "signal_type": "상승추세 눌림목",
+        "direction_score": 70,
+        "entry_score": 96,
+        "rr_ratio": 2.0,
+        "entry_range": "133,600 ~ 137,600",
+        "stop_loss": "128,700",
+        "target_1": "163,500",
+        "current_price": "141,200",
+        "data_basis_date": "2026-09-10",
+        "detail_path": "details/267270.html",
+        "badges": [
+          "관심",
+          "기관 +"
+        ],
+        "reasons": [
+          "상승추세 안에서 EMA/VWAP 눌림 후 재상승",
+          "MACD 히스토그램 개선",
+          "기관 5일 순매수"
+        ],
+        "cautions": [
+          "외국인 20일/5일 동시 순매도"
+        ],
+        "observation": false
+      },
+      {
+        "code": "443060",
+        "name": "HD현대마린솔루션",
+        "market": "KOSPI",
+        "status": "진입 보류",
+        "final_action": "진입 보류",
+        "signal_type": "돌파 후 재확인",
+        "direction_score": 76,
+        "entry_score": 49,
+        "rr_ratio": 2.0,
+        "entry_range": "224,300 ~ 229,700",
+        "stop_loss": "211,400",
+        "target_1": "264,000",
+        "current_price": "229,500",
+        "data_basis_date": "2026-09-10",
+        "detail_path": "details/443060.html",
+        "badges": [
+          "기관 +",
+          "거래량 급증"
+        ],
+        "reasons": [
+          "돌파 가격 재확인 구간",
+          "MACD 히스토그램 개선",
+          "거래량 150% 증가"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 0.3% 높아 강한 매수로 표시하지 않습니다.",
+          "당일 급등과 거래량 급증이 겹쳐 눌림 확인 전 추격매수 위험이 큽니다."
+        ],
+        "observation": false
+      }
+    ],
+    "supplemental": [
+      {
+        "code": "402340",
+        "name": "SK스퀘어",
+        "market": "KOSPI",
+        "status": "눌림 대기",
+        "final_action": "눌림 확인",
+        "signal_type": "대기",
+        "direction_score": 58,
+        "entry_score": 70,
+        "rr_ratio": 8.06,
+        "entry_range": "1,098,300 ~ 1,129,700",
+        "stop_loss": "1,004,200",
+        "target_1": "1,331,100",
+        "current_price": "1,135,000",
+        "data_basis_date": "2026-09-10",
+        "detail_path": "details/402340.html",
+        "badges": [
+          "외국인 +",
+          "기관 +"
+        ],
+        "reasons": [
+          "MACD 히스토그램 개선",
+          "외국인 5일 순매수",
+          "기관 5일 순매수"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 0.4% 높아 강한 매수로 표시하지 않습니다."
+        ],
+        "observation": true
+      },
+      {
+        "code": "180640",
+        "name": "한진칼",
+        "market": "KOSPI",
+        "status": "눌림 대기",
+        "final_action": "눌림 확인",
+        "signal_type": "대기",
+        "direction_score": 56,
+        "entry_score": 76,
+        "rr_ratio": 2.0,
+        "entry_range": "130,700 ~ 134,800",
+        "stop_loss": "124,100",
+        "target_1": "156,100",
+        "current_price": "136,900",
+        "data_basis_date": "2026-09-10",
+        "detail_path": "details/180640.html",
+        "badges": [
+          "기관 +",
+          "거래량 급증"
+        ],
+        "reasons": [
+          "ADX 32, +DI 우위",
+          "거래량 94% 증가",
+          "기관 5일 순매수"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 2.2% 높아 강한 매수로 표시하지 않습니다."
+        ],
+        "observation": true
+      },
+      {
+        "code": "006400",
+        "name": "삼성SDI",
+        "market": "KOSPI",
+        "status": "눌림 대기",
+        "final_action": "눌림 확인",
+        "signal_type": "대기",
+        "direction_score": 53,
+        "entry_score": 70,
+        "rr_ratio": 2.0,
+        "entry_range": "545,100 ~ 556,500",
+        "stop_loss": "513,600",
+        "target_1": "632,100",
+        "current_price": "561,000",
+        "data_basis_date": "2026-09-10",
+        "detail_path": "details/006400.html",
+        "badges": [],
+        "reasons": [
+          "ADX 26, +DI 우위"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 1.0% 높아 강한 매수로 표시하지 않습니다."
+        ],
+        "observation": true
+      },
+      {
+        "code": "003670",
+        "name": "포스코퓨처엠",
+        "market": "KOSPI",
+        "status": "눌림 대기",
+        "final_action": "눌림 확인",
+        "signal_type": "대기",
+        "direction_score": 50,
+        "entry_score": 58,
+        "rr_ratio": 2.0,
+        "entry_range": "184,400 ~ 188,400",
+        "stop_loss": "176,100",
+        "target_1": "218,300",
+        "current_price": "193,000",
+        "data_basis_date": "2026-09-10",
+        "detail_path": "details/003670.html",
+        "badges": [
+          "기관 +"
+        ],
+        "reasons": [
+          "MACD 히스토그램 개선",
+          "ADX 26, +DI 우위",
+          "거래량 23% 증가"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 2.6% 높아 강한 매수로 표시하지 않습니다.",
+          "현재가가 EMA20보다 8.7% 높아 눌림목 진입으로 보기 어렵습니다."
+        ],
+        "observation": true
+      },
+      {
+        "code": "005930",
+        "name": "삼성전자",
+        "market": "KOSPI",
+        "status": "눌림 대기",
+        "final_action": "눌림 확인",
+        "signal_type": "대기",
+        "direction_score": 49,
+        "entry_score": 76,
+        "rr_ratio": 4.8,
+        "entry_range": "264,100 ~ 269,300",
+        "stop_loss": "247,000",
+        "target_1": "302,000",
+        "current_price": "269,000",
+        "data_basis_date": "2026-09-10",
+        "detail_path": "details/005930.html",
+        "badges": [
+          "기관 +"
+        ],
+        "reasons": [
+          "MACD 히스토그램 개선",
+          "기관 5일 순매수"
+        ],
+        "cautions": [
+          "현재가가 권장 진입가 상단보다 0.0% 높아 강한 매수로 표시하지 않습니다."
+        ],
+        "observation": true
+      }
+    ]
+  },
+  "source_run_id": "34729156280",
+  "source_run_attempt": "1",
+  "source_workflow": "Update static mobile dashboard",
+  "source_commit": "1cec516a8f26fb15da5b5e61b40b172a3e81a591",
+  "source_branch": "main",
+  "deployed_at_kst": "2026-09-13 09:56 KST",
+  "build_id": "static-20260913-0956-1cec516-34729156280",
+  "previous_success_generated_at": "2026-09-10 17:07 KST",
+  "failed_at_kst": "2026-09-13 09:56 KST"
+}
